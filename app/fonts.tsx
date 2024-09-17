@@ -1,4 +1,4 @@
-import { Roboto_Slab, Montserrat, Open_Sans } from 'next/font/google';
+import { Roboto_Slab, Montserrat, Open_Sans, Caveat } from 'next/font/google';
 
 export const OpenSans = Open_Sans({
   display: 'swap',
@@ -10,5 +10,9 @@ export const RobotoSlab = Roboto_Slab({
 });
 
 export const MontserratFont = Montserrat({
+  subsets: ['latin']
+});
+
+export const CaveatFont = Caveat({
   subsets: ['latin']
 });

@@ -3,7 +3,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { OpenSans } from './fonts';
 
 import './globals.css';
-import { NavBar } from '@/components/NavBar';
+import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -28,8 +28,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="md:container md:mx-auto flex flex-col min-h-screen">
-            <NavBar />
-            <main className="flex-1 border-2 border-red-300 p-2">
+            <Header />
+            <main className="flex-1 p-2 text-2xl content-center mx-auto">
               {children}
             </main>
             <Footer />
