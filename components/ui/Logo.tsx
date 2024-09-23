@@ -7,7 +7,7 @@ export function Logo() {
     <motion.div
       initial={{ rotateX: 360, scale: 0 }}
       animate={{ rotateX: 0, scale: 1 }}
-      transition={{ delay: 0.1, duration: 1, type: 'spring', bounce: 0.6 }}
+      transition={{ delay: 0.2, duration: 1, type: 'spring', bounce: 0.6 }}
       className={`${CaveatFont.className} relative antialiased text-xl font-bold text-slate-700 dark:text-slate-300`}
       whileHover={{ scale: 1.1 }}
     >

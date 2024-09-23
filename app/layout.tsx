@@ -29,9 +29,7 @@ export default function RootLayout({
         >
           <div className="md:container md:mx-auto flex flex-col min-h-screen">
             <Header />
-            <main className="flex-1 p-2 text-2xl content-center mx-auto">
-              {children}
-            </main>
+            <main className="flex-1 p-2">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
