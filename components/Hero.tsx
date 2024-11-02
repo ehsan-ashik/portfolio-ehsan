@@ -1,20 +1,56 @@
 import React from 'react';
-import { herodata } from '@/data/herodata';
-import { RobotoSlab } from '@/app/fonts';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown';
+import { profiledata, herodata } from '@/data/userdata';
+import { NunitoSansFont } from '@/app/fonts';
+import { Button } from './ui/button';
+
 
 export function Hero() {
   return (
-    <section className="bg-card text-card-foreground w-full h-[500px] px-2 mx-auto lg:mx-0 text-balance">
-      <div
-        className={`${RobotoSlab.className} w-auto lg:w-[450px] mx-auto lg:mx-0 text-center lg:text-left pt-20 text-3xl lg:pl-20`}
+    <section className="w-full mx-auto lg:mx-0 ">
+      <ReactMarkdown
+        className={` ${NunitoSansFont.className} w-auto md:w-[36rem] mx-auto md:mx-0 text-left pt-20 pb-5 text-5xl md:text-5xl font-light opacity-95`}
       >
         {herodata.title}
-        <span className="w-full font-bold text-4xl uppercase ">
-          {herodata.name}
-        </span>
-      </div>
-      <div className="w-full lg:w-[700px] mx-auto lg:mx-0 pt-8 lg:pl-20 text-muted-foreground text-center lg:text-left text-sm italic text-balance">
-        {herodata.short_desc}
+      </ReactMarkdown>
+      {herodata.short_desc_parts.map((part, idx) => (
+        <ReactMarkdown
+          key={idx}
+          className="w-auto lg:w-[48rem] mx-auto md:mx-0 pt-6 text-left leading-7 font-light opacity-90"
+        >
+          {part}
+        </ReactMarkdown>
+      ))}
+
+      <div className="pt-10 flex gap-3">
+        <a
+          href= {"mailto:" + profiledata.official_email}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="default" className=" rounded-full px-10">
+            Contact me
+          </Button>
+        </a>
+        <a
+          href={profiledata.github_url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="outline" size="icon" className="rounded-full">
+            <FaGithub className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 opacity-80" />
+          </Button>
+        </a>
+        <a
+          href={profiledata.linkedin_url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="outline" size="icon" className="rounded-full">
+            <FaLinkedin className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 opacity-80" />
+          </Button>
+        </a>
       </div>
     </section>
   );
