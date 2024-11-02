@@ -4,7 +4,7 @@ import { CaveatFont } from '@/app/fonts';
 export function Logo() {
   return (
     <div
-      className={`${CaveatFont.className} text-2xl relative antialiased font-bold text-slate-700 dark:text-slate-300`}
+      className={`${CaveatFont.className} text-lg md:text-xl lg:text-2xl relative antialiased font-bold text-slate-700 dark:text-slate-300`}
     >
       <span className="text-gray-700 dark:text-gray-100">E</span>
       <span className="text-gray-700 dark:text-gray-100">h</span>

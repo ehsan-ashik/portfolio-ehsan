@@ -14,7 +14,7 @@ export function Hero() {
       >
         {herodata.title}
       </ReactMarkdown>
-      {herodata.short_desc_parts.map((part, idx) => (
+      {herodata.hero_desc_parts.map((part, idx) => (
         <ReactMarkdown
           key={idx}
           className="w-auto lg:w-[48rem] mx-auto md:mx-0 pt-6 text-left leading-7 font-light opacity-90"

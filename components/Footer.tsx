@@ -4,9 +4,9 @@ import React from 'react';
 export function Footer() {
   return (
     <footer
-      className={`${MontserratFont.className} text-sm text-center px-2 py-4`}
+      className={`${MontserratFont.className} min-h-16 text-sm py-2 flex justify-center items-center text-muted-foreground`}
     >
-      Copyright <span>&copy;</span> 2024 | Ehsan Ul Haque
+      Ehsan Ul Haque | &copy; 2024
     </footer>
   );
 }
