@@ -18,7 +18,7 @@ export const herodata = {
 
     "In my career, I progressed from software engineer to senior roles, mastering backend architecture, scalable code design, and agile methodologies while mentoring others along the way. My current research in usable security and privacy combines my technical skills with a human-centered approach, exploring how people interact with security and privacy tools.",
 
-    "I'm excited by new challenges and driven to keep pushing the boundaries of what I can create."
+    "I'm excited by new challenges and driven to keep pushing the boundaries of what I can achieve."
   ]
 }
 
@@ -26,9 +26,7 @@ export const aboutdata = {
   "about_desc_parts": [
     "Hello, my name is Ehsan. My journey into technology wasn't exactly planned; it started with a love for gaming. When I began my undergraduate studies in computer science, I didn't know much about programming. But I did know that computers held tremendous power, and I was curious to understand it.",
     
-    "In my first year, I started learning C. It was a rewarding experience, yet I barely scratched the surface of what programming could do. My real “aha” moment came in my second year with Java, where I developed a graphical calculator app as a project. It was my first substantial creation—something I built from scratch—and it opened my eyes to the world of possibilities. I began to understand that programming was more than just lines of code; it was a tool to bring ideas to life.",
-    
-    "Then, in my third year, I tackled a graphics project where I built a 3D model of the Taj Mahal. Rendering the beautiful structure with ambient and point lighting was my first major technical feat. It was hard work, but I realized then that I could create virtually anything I set my mind to. The initial steep learning curves didn't deter me; they motivated me. My confidence grew with each project, and I started betting on myself to conquer even the most challenging tasks.",
+    "In my first year, I started learning C. It was a rewarding experience, yet I barely scratched the surface of what programming could do. My real “aha” moment came in my second year with Java, where I developed a [GUI-based 15 puzzle game](https://jumpshare.com/v/IJElwsVOsdKAHFapzB0n) as a project. It was my first substantial creation—something I built from scratch—and it opened my eyes to the world of possibilities. I began to understand that programming was more than just lines of code; it was a tool to bring ideas to life. The initial steep learning curves didn't deter me; they motivated me. My confidence grew with each project, and I started betting on myself to conquer even the most challenging tasks.",
     
     "After graduating, I received my first job offer as a software engineer, where I quickly learned that real-world coding goes beyond writing functional code. In a company, code needs to be clean, maintainable, and scalable. I learned to implement design patterns and to write code that others could easily follow and extend. Diving into large codebases, understanding them, and making modifications was challenging but invaluable. One memorable project was creating an offline mode for a website using shell scripts. I also became familiar with agile methodologies, sprint-based workflows, and version control—practical skills that transformed me into a disciplined, well-rounded engineer.",
 
@@ -39,3 +37,72 @@ export const aboutdata = {
     "Today, as I near the end of my PhD journey, I'm excited about where this curiosity will take me next. Each step in my career, from programming as a novice to researching complex user behaviors, has been about learning, challenging myself, and expanding my capabilities. I'm driven by a genuine love for learning and building, and I can't wait to see what challenges lie ahead."
   ]
 }
+
+export const skillsdata = [
+  {
+    "category": "Programming Language",
+    "values": [
+      "Python", "Java", "C#", "C++"
+    ]
+  },
+  {
+    "category": "Database",
+    "values": [
+      "SQL Server", "MySQL", "MongoDB"
+    ]
+  },
+  {
+    "category": "Version Control",
+    "values": [
+      "Git", "TFS"
+    ]
+  },
+  {
+    "category": "Project Management",
+    "values": [
+      "Jira", "Teamwork", "Trello"
+    ]
+  },
+  {
+    "category": "Cloud Repository",
+    "values": [
+      "GitHub", "Bitbucket"
+    ]
+  },
+  {
+    "category": "CI/CD",
+    "values": [
+      "TeamCity", "Octopus", "GitHub Actions"
+    ]
+  },
+  {
+    "category": "Graphics Fremwork",
+    "values": [
+      "Unity", "OpenGL"
+    ]
+  },
+  {
+    "category": "Web",
+    "values": [
+      "Next.js", "React", "Vue", "Tailwind"
+    ]
+  },
+  {
+    "category": "Statistical Analysis",
+    "values": [
+      "Python", "R", "SPSS"
+    ]
+  },
+  {
+    "category": "ML/AI",
+    "values": [
+      "PyTorch", "Langchain", "HuggingFace", "Scikit-Learn"
+    ]
+  },
+  {
+    "category": "Others",
+    "values": [
+      "Docker", "Telerik Winforms", "NUnit", "Shell"
+    ]
+  },
+]

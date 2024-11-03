@@ -4,13 +4,15 @@ import ReactMarkdown from 'react-markdown';
 import { profiledata, herodata } from '@/data/userdata';
 import { NunitoSansFont } from '@/app/fonts';
 import { Button } from './ui/button';
+import { ExternalLink } from 'lucide-react';
+
 
 
 export function Hero() {
   return (
     <section className="w-full mx-auto lg:mx-0 ">
       <ReactMarkdown
-        className={` ${NunitoSansFont.className} w-auto md:w-[36rem] mx-auto md:mx-0 text-left pt-20 pb-5 text-5xl md:text-5xl font-light opacity-95`}
+        className={` ${NunitoSansFont.className} w-auto md:w-[36rem] mx-auto md:mx-0 text-center md:text-left pt-10 md:pt-20 pb-5 text-5xl md:text-5xl font-light opacity-95`}
       >
         {herodata.title}
       </ReactMarkdown>
@@ -23,14 +25,11 @@ export function Hero() {
         </ReactMarkdown>
       ))}
 
-      <div className="pt-10 flex gap-3">
-        <a
-          href= {"mailto:" + profiledata.official_email}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button variant="default" className=" rounded-full px-10">
-            Contact me
+      <div className="pt-10 flex gap-3 justify-center md:justify-start">
+        <a href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <Button variant="default" className=" rounded-full px-10 flex gap-2">
+            <ExternalLink className="w-[1.2rem] h-[1.2rem]" />
+            <span>View Resume</span>
           </Button>
         </a>
         <a

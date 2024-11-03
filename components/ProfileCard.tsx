@@ -1,7 +1,6 @@
 import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 import React from 'react';
-import profileImg from '@/assets/images/profile_photo.jpg'
 import { profiledata } from '@/data/userdata';
 import { FaGithub, FaLinkedin, FaInstagramSquare } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
@@ -12,12 +11,14 @@ export function ProfileCard() {
     <div className="mx-auto max-w-56 flex flex-col gap-5 ">
       <div className="aspect-square min-w-48 min-h-48 rounded-full overflow-clip mx-auto">
         <Image
-          src={profileImg}
+          src="/images/profile_photo.jpg"
           alt="Profile picture"
           className="object-contain -translate-y-5"
+          width={400}
+          height={400}
         />
       </div>
-      <div className=''>
+      <div className=" flex flex-col items-center text-center md:items-start md:text-left">
         <div
           className={`${NunitoSansFont.className} text-3xl lg:text-2xl font-bold opacity-95`}
         >
