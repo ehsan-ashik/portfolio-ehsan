@@ -1,3 +1,4 @@
+"use client";
 import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 import React from 'react';
@@ -5,6 +6,7 @@ import { profiledata } from '@/data/userdata';
 import { FaGithub, FaLinkedin, FaInstagramSquare } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { FaLocationDot } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
 
 export function ProfileCard() {
   return (
@@ -26,8 +28,12 @@ export function ProfileCard() {
         </div>
         <div className="font-light text-sm">{profiledata.headline}</div>
         <div className=" pt-2 flex gap-1 items-center text-sm opacity-80">
+          <MdEmail className="h-4 w-4 opacity-90" />
+          <span>{profiledata.official_email}</span>
+        </div>
+        <div className=" pt-2 flex gap-1 items-center text-sm opacity-80">
           <FaLocationDot className="h-4 w-4 opacity-90" />
-          <span className="">{profiledata.location}</span>
+          <span>{profiledata.location}</span>
         </div>
         <div className=" pt-3 flex gap-5 items-center">
           <a

@@ -26,7 +26,7 @@ export const aboutdata = {
   "about_desc_parts": [
     "Hello, my name is Ehsan. My journey into technology wasn't exactly planned; it started with a love for gaming. When I began my undergraduate studies in computer science, I didn't know much about programming. But I did know that computers held tremendous power, and I was curious to understand it.",
     
-    "In my first year, I started learning C. It was a rewarding experience, yet I barely scratched the surface of what programming could do. My real “aha” moment came in my second year with Java, where I developed a [GUI-based 15 puzzle game](https://jumpshare.com/v/IJElwsVOsdKAHFapzB0n) as a project. It was my first substantial creation—something I built from scratch—and it opened my eyes to the world of possibilities. I began to understand that programming was more than just lines of code; it was a tool to bring ideas to life. The initial steep learning curves didn't deter me; they motivated me. My confidence grew with each project, and I started betting on myself to conquer even the most challenging tasks.",
+    "In my first year, I started learning C. It was a rewarding experience, yet I barely scratched the surface of what programming could do. My real “aha” moment came in my second year with Java, where I developed a [GUI-based 15 puzzle game](https://github.com/ehsan-ashik/15-puzzle-game) as a project. It was my first substantial creation—something I built from scratch—and it opened my eyes to the world of possibilities. I began to understand that programming was more than just lines of code; it was a tool to bring ideas to life. The initial steep learning curves didn't deter me; they motivated me. My confidence grew with each project, and I started betting on myself to conquer even the most challenging tasks.",
     
     "After graduating, I received my first job offer as a software engineer, where I quickly learned that real-world coding goes beyond writing functional code. In a company, code needs to be clean, maintainable, and scalable. I learned to implement design patterns and to write code that others could easily follow and extend. Diving into large codebases, understanding them, and making modifications was challenging but invaluable. One memorable project was creating an offline mode for a website using shell scripts. I also became familiar with agile methodologies, sprint-based workflows, and version control—practical skills that transformed me into a disciplined, well-rounded engineer.",
 
@@ -104,5 +104,84 @@ export const skillsdata = [
     "values": [
       "Docker", "Telerik Winforms", "NUnit", "Shell"
     ]
+  },
+]
+
+export const projectsdata = [
+  {
+    "rank": 3,
+    "visible": true,
+    "title": "Amazon Product Review Scraping and Parsing Toolkit",
+    "description": "This application streamlines the retrieval of user reviews for Amazon products, offering flexible options to filter reviews by multiple criteria supported by Amazon. Additionally, it enables targeted review searches based on specific keywords. The tool also features built-in functionality to parse and export the collected data into JSON or CSV formats, making it easy to analyze and integrate into other workflows.",
+    "github_link": "https://github.com/ehsan-ashik/amazon-product-review-scraper",
+    "stack": [ "Python", "Poetry", "Beautiful Soup 4"],
+    "additional_link_title": "",
+    "additional_link": ""
+  },
+
+  {
+    "rank": 2,
+    "visible": true,
+    "title": "Tic-Tac-Toe Game",
+    "description": "This project recreates the iconic Tic-Tac-Toe game, designed for an engaging player experience against a sophisticated AI opponent. Players can choose from three difficulty levels—*Normal*, *Hard*, and the ultimate challenge, *Unbeatable*. The AI opponent brings a new level of strategic depth, leveraging the [Minimax algorithm with Alpha-Beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) to evaluate optimal moves and anticipate the player's strategy. Each level offers a unique challenge, from casual gameplay to a flawless opponent that's hard (impossible) to beat.",
+    "github_link": "https://github.com/ehsan-ashik/tic-tac-toe",
+    "stack": [ "C#", "Unity 2D"],
+    "additional_link_title": "Play Game",
+    "additional_link": "https://ehsan-ashik.github.io/tic-tac-toe-unity-game/"
+  },
+
+  {
+    "rank": 1,
+    "visible": true,
+    "title": "Amazon Mechanical Turk Requester API Helpers",
+    "description": "This .NET application serves as a powerful toolkit for advanced requester tasks on [Amazon Mechanical Turk (MTurk)](https://www.mturk.com/). Equipped with a curated set of helper functions, it allows users to programmatically handle *requester* tasks that go beyond the capabilities of the standard MTurk Web Requester Portal. Additionally, the app supports exporting *worker* data into Excel sheets based on *QualificationTypes*, making it convenient to organize and analyze worker information. Further, the app includes a robust logging system for sensitive tasks, such as sending emails to workers.",
+    "github_link": "https://github.com/ehsan-ashik/mturk-api-helpers-console-app",
+    "stack": [ "C#", ".NET", "AWS MTurk SDK", "ClosedXML"],
+    "additional_link_title": "",
+    "additional_link": ""
+  },
+
+  {
+    "rank": 4,
+    "visible": true,
+    "title": "Smart-on-FHIR Client Portal",
+    "description": "This client portal application is designed to support [FHIR (Fast Healthcare Interoperability Resources) standards](https://www.hl7.org/fhir/overview.html), integrating various essential resources like *Practitioner*, *Patient*, and *Patient Observations*. On the backend, it supports secure authentication with [Logica EHR sandbox](https://sandbox.logicahealth.org/dashboard), ensuring reliable access to health data. For added resilience, the app includes a fallback mechanism to a local FHIR server (if available), allowing uninterrupted service when remote server authentication or authorization encounters issues. This ensures robust and secure access to health information, enhancing usability and compliance with FHIR specifications.",
+    "github_link": "https://github.com/ehsan-ashik/smart-on-fhir-vuejs-client-portal",
+    "stack": [ "Node.js", "Vue.js"],
+    "additional_link_title": "",
+    "additional_link": ""
+  },
+
+  {
+    "rank": 6,
+    "visible": true,
+    "title": "15 Puzzle Game",
+    "description": "This project brings the classic [15 Puzzle game](https://en.wikipedia.org/wiki/15_puzzle) to life with a Java Swing interface, offering an intuitive and interactive experience. From the main menu, clicking the *Game* button launches the puzzle, where players can shuffle the grid and take on the challenge of reordering the tiles to their original positions. Players begin with a perfectly ordered grid, giving a clear view of the goal configuration. If stuck, player can reset the grid to start again. With every move, the game tests players' strategic thinking and spatial skills, making it a fun and mentally engaging experience. ",
+    "github_link": "https://github.com/ehsan-ashik/15-puzzle-game",
+    "stack": [ "Java", "Swing", "Docker"],
+    "additional_link_title": "View gameplay",
+    "additional_link": "https://jumpshare.com/v/IJElwsVOsdKAHFapzB0n"
+  },
+
+  {
+    "rank": 7,
+    "visible": false,
+    "title": "mRNA-based Prostate Cancer Detection",
+    "description": "In this project, I trained micro RNA-based classification models to accurately identify prostate cancer. Prostate cancer is one of the common cancer types. While some types of prostate cancer grow slowly and may not need only minimal or no treatment, some other types can be very aggressive and can grow quickly. Best fitted trained model performed well for classification task, with over 95% accuracy.",
+    "github_link": "https://github.com/ehsan-ashik/prostate-cancer-classification",
+    "stack": ["R"],
+    "additional_link_title": "View report",
+    "additional_link": "https://github.com/ehsan-ashik/prostate-cancer-classification/blob/main/CSE_5713___Data_Mining___Project_Report.pdf"
+  },
+
+  {
+    "rank": 5,
+    "visible": true,
+    "title": "3D Render of the Mega Structure Taj Mahal",
+    "description": "This Windows application brings [the majestic Taj Mahal](https://en.wikipedia.org/wiki/Taj_Mahal) to life in 3D, allowing users to explore the architectural marvel from numerous viewpoints. With ambient lighting and optional white and blue point lights, the app creates a captivating atmosphere, casting dynamic shadows and illuminating the monument's intricate details. Users can rotate the light sources 360 degrees, enhancing the visual depth and realism of the scene. Additionally, keyboard camera controls let users navigate the 3D space, offering exploration of the structure from different viewpoints.",
+    "github_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer",
+    "stack": [ "C++", "OpenGL"],
+    "additional_link_title": "View renders",
+    "additional_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/blue-light-1.PNG"
   },
 ]

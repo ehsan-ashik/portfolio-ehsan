@@ -98,4 +98,8 @@ body {
   p > strong {
     @apply font-bold;
   }
+
+    p > em {
+      @apply font-normal;
+    }
 }

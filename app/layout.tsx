@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import { InterFont, OpenSans } from './fonts';
+import { InterFont } from './fonts';
 
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Ehsan Ul Haque',
+  title: 'Ehsan Ul Haque',
   description: 'Portfolio of Ehsan Ul Haque'
 };
 
