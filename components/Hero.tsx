@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { profiledata, herodata } from '@/data/userdata';
 import { NunitoSansFont } from '@/app/fonts';
 import { Button } from './ui/button';
-import { ExternalLink, Mails } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { MdEmail } from 'react-icons/md';
 
 
