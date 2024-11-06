@@ -26,10 +26,10 @@ export function ProjectCard(project: Project) {
         >
           {project.title}
         </h1>
-        <div className="pt-1 text-muted-foreground flex gap-1 justify-center md:justify-start">
+        <div className="pt-1 text-muted-foreground flex flex-wrap gap-1 justify-center md:justify-start">
           {project.stack.map((value, idx) => (
             <Badge variant="secondary" key={idx} className="">
-              <span>{value}</span>
+              <span className='text-nowrap'>{value}</span>
             </Badge>
           ))}
         </div>
@@ -37,7 +37,7 @@ export function ProjectCard(project: Project) {
           {project.description}
         </ReactMarkdown>
 
-        <div className="pt-4 flex flex-col md:flex-row gap-1 md:gap-2 justify-center md:justify-start">
+        <div className="pt-4 flex flex-col md:flex-row gap-1 md:gap-2 items-center md:items-start">
           <a
             href={project.github_link}
             target="_blank"

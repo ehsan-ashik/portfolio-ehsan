@@ -18,14 +18,14 @@ export function SkillsCard() {
       </p>
       <div className="rounded-lg py-4 flex flex-col gap-4 pl-6">
         {skillsdata.map((skillitem, idx) => (
-          <div key={idx} className="flex gap-16 lg:gap-6 pb-4 md:pb-2 border-b md:border-none">
+          <div key={idx} className="flex gap-6 pb-4 md:pb-2 border-b md:border-none">
             <span className="flex-1 italic text-muted-foreground font-semibold">
               {skillitem.category}
             </span>
             <div className=" flex-1 flex flex-col md:flex-row gap-2 flex-wrap">
               {skillitem.values.map((skill, idx) => (
                 <div key={idx}>
-                  <Badge variant="default">{skill}</Badge>
+                  <Badge variant="default" className='text-nowrap'>{skill}</Badge>
                 </div>
               ))}
             </div>

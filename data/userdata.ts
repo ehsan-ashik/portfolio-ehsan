@@ -18,7 +18,7 @@ export const herodata = {
 
     "In my career, I progressed from software engineer to senior roles, mastering backend architecture, scalable code design, and agile methodologies while mentoring others along the way. My current research in usable security and privacy combines my technical skills with a human-centered approach, exploring how people interact with security and privacy tools.",
 
-    "I'm excited by new challenges and driven to keep pushing the boundaries of what I can achieve."
+    `I'm excited by new challenges and driven to keep pushing the boundaries of what I can achieve. Feel free to reach out if you want to collaborate, have a question, or just want to connect — [**${profiledata.official_email}**](mailto:${profiledata.official_email})`
   ]
 }
 
@@ -84,7 +84,7 @@ export const skillsdata = [
   {
     "category": "Web",
     "values": [
-      "Next.js", "React", "Vue", "Tailwind"
+      "Next.js", "React.js", "Vue.js", "Tailwind"
     ]
   },
   {
@@ -136,7 +136,7 @@ export const projectsdata = [
     "title": "Amazon Mechanical Turk Requester API Helpers",
     "description": "This .NET application serves as a powerful toolkit for advanced requester tasks on [Amazon Mechanical Turk (MTurk)](https://www.mturk.com/). Equipped with a curated set of helper functions, it allows users to programmatically handle *requester* tasks that go beyond the capabilities of the standard MTurk Web Requester Portal. Additionally, the app supports exporting *worker* data into Excel sheets based on *QualificationTypes*, making it convenient to organize and analyze worker information. Further, the app includes a robust logging system for sensitive tasks, such as sending emails to workers.",
     "github_link": "https://github.com/ehsan-ashik/mturk-api-helpers-console-app",
-    "stack": [ "C#", ".NET", "AWS MTurk SDK", "ClosedXML"],
+    "stack": [ "C#", ".NET", "AWS MTurk SDK"],
     "additional_link_title": "",
     "additional_link": ""
   },

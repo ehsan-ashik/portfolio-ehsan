@@ -11,7 +11,7 @@ export default function Page() {
       >
         My Projects
       </h1>
-      <p className="pt-4 font-light">
+      <p className="pt-4 font-light opacity-90">
         Explore a curated selection of my projects, each with a brief
         description to give you a taste of what I've been working on. For a
         complete list and in-depth details, {' '}

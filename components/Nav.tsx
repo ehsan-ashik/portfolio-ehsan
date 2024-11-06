@@ -15,7 +15,7 @@ export function Nav() {
   };
   const pathname = usePathname();
   return (
-    <div className="flex flex-col items-center justify-center md:flex-row gap-2 md:gap-6 lg:gap-8 opacity-80 font-light">
+    <div className="flex flex-col items-center justify-center md:flex-row gap-2 md:gap-6 lg:gap-8 opacity-90 font-light">
       {navitems.map((navitem) => (
         <Link href={navitem.path} key={navitem.name}>
           <motion.div
