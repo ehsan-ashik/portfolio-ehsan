@@ -1,7 +1,7 @@
 {
   "name": "portfolio-ehsan",
   "description": "Portfolio of Ehsan Ul Haque",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

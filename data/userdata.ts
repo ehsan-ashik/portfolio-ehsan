@@ -26,7 +26,7 @@ export const aboutdata = {
   "about_desc_parts": [
     "Hello, my name is Ehsan. My journey into technology wasn't exactly planned; it started with a love for gaming. When I began my undergraduate studies in computer science, I didn't know much about programming. But I did know that computers held tremendous power, and I was curious to understand it.",
     
-    "In my first year, I started learning C. It was a rewarding experience, yet I barely scratched the surface of what programming could do. My real “aha” moment came in my second year with Java, where I developed a [GUI-based 15 puzzle game](https://github.com/ehsan-ashik/15-puzzle-game) as a project. It was my first substantial creation—something I built from scratch—and it opened my eyes to the world of possibilities. I began to understand that programming was more than just lines of code; it was a tool to bring ideas to life. The initial steep learning curves didn't deter me; they motivated me. My confidence grew with each project, and I started betting on myself to conquer even the most challenging tasks.",
+    "In my first year, I started learning C. It was a rewarding experience, yet I barely scratched the surface of what programming could do. My real “aha” moment came in my second year with Java, where I developed a [GUI-based 15 puzzle game](https://games.ehsanulhaque.com/fifteenpuzzlestart) as a project. It was my first substantial creation—something I built from scratch—and it opened my eyes to the world of possibilities. I began to understand that programming was more than just lines of code; it was a tool to bring ideas to life. The initial steep learning curves didn't deter me; they motivated me. My confidence grew with each project, and I started betting on myself to conquer even the most challenging tasks.",
     
     "After graduating, I received my first job offer as a software engineer, where I quickly learned that real-world coding goes beyond writing functional code. In a company, code needs to be clean, maintainable, and scalable. I learned to implement design patterns and to write code that others could easily follow and extend. Diving into large codebases, understanding them, and making modifications was challenging but invaluable. One memorable project was creating an offline mode for a website using shell scripts. I also became familiar with agile methodologies, sprint-based workflows, and version control—practical skills that transformed me into a disciplined, well-rounded engineer.",
 
@@ -156,11 +156,11 @@ export const projectsdata = [
     "rank": 6,
     "visible": true,
     "title": "15 Puzzle Game",
-    "description": "This project brings the classic [15 Puzzle game](https://en.wikipedia.org/wiki/15_puzzle) to life with a Java Swing interface, offering an intuitive and interactive experience. From the main menu, clicking the *Game* button launches the puzzle, where players can shuffle the grid and take on the challenge of reordering the tiles to their original positions. Players begin with a perfectly ordered grid, giving a clear view of the goal configuration. If stuck, player can reset the grid to start again. With every move, the game tests players' strategic thinking and spatial skills, making it a fun and mentally engaging experience. ",
+    "description": "This project brings the classic [15 Puzzle game](https://en.wikipedia.org/wiki/15_puzzle) to life with a Java Swing interface, offering an intuitive and interactive experience. From the main menu, clicking the *Game* button launches the puzzle, where players can shuffle the grid and take on the challenge of reordering the tiles to their original positions. Players begin with a perfectly ordered grid, giving a clear view of the goal configuration. If stuck, player can reset the grid to start again. With every move, the game tests players' strategic thinking and spatial skills, making it a fun and mentally engaging experience. *Use **admin** as username and **pwd** as password to play*.",
     "github_link": "https://github.com/ehsan-ashik/15-puzzle-game",
     "stack": [ "Java", "Swing", "Docker"],
-    "additional_link_title": "View gameplay",
-    "additional_link": "https://jumpshare.com/v/IJElwsVOsdKAHFapzB0n"
+    "additional_link_title": "Play Game",
+    "additional_link": "https://games.ehsanulhaque.com/fifteenpuzzlestart"
   },
 
   {
@@ -170,7 +170,7 @@ export const projectsdata = [
     "description": "In this project, I trained micro RNA-based classification models to accurately identify prostate cancer. Prostate cancer is one of the common cancer types. While some types of prostate cancer grow slowly and may not need only minimal or no treatment, some other types can be very aggressive and can grow quickly. Best fitted trained model performed well for classification task, with over 95% accuracy.",
     "github_link": "https://github.com/ehsan-ashik/prostate-cancer-classification",
     "stack": ["R"],
-    "additional_link_title": "View report",
+    "additional_link_title": "View Report",
     "additional_link": "https://github.com/ehsan-ashik/prostate-cancer-classification/blob/main/CSE_5713___Data_Mining___Project_Report.pdf"
   },
 
@@ -181,7 +181,7 @@ export const projectsdata = [
     "description": "This Windows application brings [the majestic Taj Mahal](https://en.wikipedia.org/wiki/Taj_Mahal) to life in 3D, allowing users to explore the architectural marvel from numerous viewpoints. With ambient lighting and optional white and blue point lights, the app creates a captivating atmosphere, casting dynamic shadows and illuminating the monument's intricate details. Users can rotate the light sources 360 degrees, enhancing the visual depth and realism of the scene. Additionally, keyboard camera controls let users navigate the 3D space, offering exploration of the structure from different viewpoints.",
     "github_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer",
     "stack": [ "C++", "OpenGL"],
-    "additional_link_title": "View renders",
+    "additional_link_title": "View Renders",
     "additional_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/blue-light-1.PNG"
   },
 ]
