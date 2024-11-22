@@ -10,6 +10,11 @@ export const navitems = [
     'display': 'Projects'
   },
   {
+    'path': '/research',
+    'name': 'research',
+    'display': 'Research'
+  },
+  {
     'path': '/about',
     'name': 'about',
     'display': 'About Me'

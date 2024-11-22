@@ -11,13 +11,13 @@ export function Header() {
       <div className="flex-1">
         <Logo />
       </div>
-      <div className="flex-auto hidden md:block">
+      <div className="flex-auto hidden lg:block">
         <Nav />
       </div>
       <div className="flex-1 ml-auto text-end">
         <ThemeToggle />
       </div>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobileNav />
       </div>
     </div>
