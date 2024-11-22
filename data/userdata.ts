@@ -199,8 +199,8 @@ export const researchdata = [
     "additional_link": "https://drive.google.com/file/d/1td5S5YX87nW9XsEBLJ7Bi7UPx8aHkD4p/view",
     "visual_type": "slides",
     "visual_link": `<iframe
-              src="https://uconn-my.sharepoint.com/personal/ehsan_ul_haque_uconn_edu/_layouts/15/Doc.aspx?sourcedoc={8b958379-784e-46f0-809a-17ed9607a80f}&amp;action=embedview&amp;wdAr=1.7777777777777777"
-              class="w-full lg:w-[450px] h-[285px] rounded-lg"
+              src="https://docs.google.com/presentation/d/e/2PACX-1vQIXv6oXs-xb6HToKV8fNsGvqb7lSzzXSnnfUM48RPW9OHyDXejWE6EYhXy8Eqb5_SuylIe1evpV5g_/embed?start=false&loop=false&delayms=60000" frameborder="10" width="442" height="285"
+              class="lg:w-[455px] h-[285px]"
             ></iframe>`,
     "remark": "The paper based on this project received 'Best Paper Award at 2023 ACM CHI Conference on Human Factors in Computing Systems'"
   },
@@ -216,8 +216,8 @@ export const researchdata = [
     "additional_link": "",
     "visual_type": "slides",
     "visual_link": `<iframe
-              src="https://uconn-my.sharepoint.com/personal/ehsan_ul_haque_uconn_edu/_layouts/15/Doc.aspx?sourcedoc={d32c9865-2728-42a1-93f7-91ae94146c3e}&amp;action=embedview&amp;wdAr=1.7777777777777777"
-              class="w-full lg:w-[450px] h-[285px] rounded-lg"
+              src="https://docs.google.com/presentation/d/e/2PACX-1vS2-exlkTB5vd80HIDajCCJ8mPaU9eVgD34ngHrhqeYnLqmmkD-Ad9zHzbr-ZdKEb0EzeJZlmuxY8Aj/embed?start=false&loop=false&delayms=60000" frameborder="10" width="442" height="285"
+              class="lg:w-[455px] h-[285px]"
             ></iframe>`,
   },
 
@@ -232,8 +232,8 @@ export const researchdata = [
     "additional_link": "",
     "visual_type": "slides",
     "visual_link": `<iframe
-              src="https://uconn-my.sharepoint.com/personal/ehsan_ul_haque_uconn_edu/_layouts/15/Doc.aspx?sourcedoc={dd9d944a-2dce-4e11-a456-034abb8811b9}&amp;action=embedview&amp;wdAr=1.7777777777777777"
-              class="w-full lg:w-[450px] h-[285px] rounded-lg"
+              src="https://docs.google.com/presentation/d/e/2PACX-1vQII73_C_SIhNdJv0qLyJq_x2KOldahxqaFcOY6gPifgpuN4B5g1fD4jT3yzjvhU89ouYBYSIUH7c27/embed?start=false&loop=false&delayms=60000" frameborder="10" width="442" height="285"
+              class="lg:w-[455px] h-[285px]"
             ></iframe>`,
   },
 
