@@ -116,7 +116,9 @@ export const projectsdata = [
     "github_link": "https://github.com/ehsan-ashik/amazon-product-review-scraper",
     "stack": [ "Python", "Poetry", "Beautiful Soup 4"],
     "additional_link_title": "",
-    "additional_link": ""
+    "additional_link": "",
+    "visual_type": "image",
+    "visual_link": "/images/scraper.png",
   },
 
   {
@@ -127,7 +129,9 @@ export const projectsdata = [
     "github_link": "https://github.com/ehsan-ashik/tic-tac-toe",
     "stack": [ "C#", "Unity 2D"],
     "additional_link_title": "Play Game",
-    "additional_link": "https://ehsan-ashik.github.io/tic-tac-toe-unity-game/"
+    "additional_link": "https://ehsan-ashik.github.io/tic-tac-toe-unity-game/",
+    "visual_type": "image",
+    "visual_link": "/images/tictactoe.png",
   },
 
   {
@@ -138,7 +142,9 @@ export const projectsdata = [
     "github_link": "https://github.com/ehsan-ashik/mturk-api-helpers-console-app",
     "stack": [ "C#", ".NET", "AWS MTurk SDK"],
     "additional_link_title": "",
-    "additional_link": ""
+    "additional_link": "",
+    "visual_type": "image",
+    "visual_link": "/images/mturkhelpers.png",
   },
 
   {
@@ -149,18 +155,22 @@ export const projectsdata = [
     "github_link": "https://github.com/ehsan-ashik/smart-on-fhir-vuejs-client-portal",
     "stack": [ "Node.js", "Vue.js"],
     "additional_link_title": "",
-    "additional_link": ""
+    "additional_link": "",
+    "visual_type": "image",
+    "visual_link": "/images/fhirportal.png",
   },
 
   {
     "rank": 4,
     "visible": true,
     "title": "15 Puzzle Game",
-    "description": "This project brings the classic [15 Puzzle game](https://en.wikipedia.org/wiki/15_puzzle) to life with a Java Swing interface, offering an intuitive and interactive experience. From the main menu, clicking the *Game* button launches the puzzle, where players can shuffle the grid and take on the challenge of reordering the tiles to their original positions. Players begin with a perfectly ordered grid, giving a clear view of the goal configuration. If stuck, player can reset the grid to start again. With every move, the game tests players' strategic thinking and spatial skills, making it a fun and mentally engaging experience. A major challenge was figuring out how to host the game online as Swing apps are not web-compatible. I used [Webswing](https://www.webswing.org/en) to make the app web-compatible, then deployed the dockerized app in an *AWS EC2* instance.\n\n*Use **admin** as username and **pwd** as password to play.*",
+    "description": "This project brings the classic [15 Puzzle game](https://en.wikipedia.org/wiki/15_puzzle) to life with a Java Swing interface, offering an intuitive and interactive experience. From the main menu, clicking the *Game* button launches the puzzle, where players can shuffle the grid and take on the challenge of reordering the tiles to their original positions. Players begin with a perfectly ordered grid, giving a clear view of the goal configuration. If stuck, player can reset the grid to start again. With every move, the game tests players' strategic thinking and spatial skills, making it a fun and mentally engaging experience. A major challenge was figuring out how to host the game online as Swing apps are not web-compatible. I used [Webswing](https://www.webswing.org/en) to make the app web-compatible, then deployed the dockerized app in an *AWS EC2* instance.",
     "github_link": "https://github.com/ehsan-ashik/15-puzzle-game",
     "stack": [ "Java", "Swing", "Docker", "AWS"],
-    "additional_link_title": "Play Game",
-    "additional_link": "https://games.ehsanulhaque.com/fifteenpuzzlestart"
+    "additional_link_title": "",
+    "additional_link": "",
+    "visual_type": "image",
+    "visual_link": "/images/15puzzle.png",
   },
 
   {
@@ -171,7 +181,9 @@ export const projectsdata = [
     "github_link": "https://github.com/ehsan-ashik/prostate-cancer-classification",
     "stack": ["R"],
     "additional_link_title": "View Report",
-    "additional_link": "https://github.com/ehsan-ashik/prostate-cancer-classification/blob/main/CSE_5713___Data_Mining___Project_Report.pdf"
+    "additional_link": "https://github.com/ehsan-ashik/prostate-cancer-classification/blob/main/CSE_5713___Data_Mining___Project_Report.pdf",
+    "visual_type": "image",
+    "visual_link": "/images/tictactoe.png",
   },
 
   {
@@ -182,7 +194,9 @@ export const projectsdata = [
     "github_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer",
     "stack": [ "C++", "OpenGL"],
     "additional_link_title": "View Renders",
-    "additional_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/blue-light-1.PNG"
+    "additional_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/blue-light-1.PNG",
+    "visual_type": "image",
+    "visual_link": "/images/tajmahal.png",
   },
 ]
 
