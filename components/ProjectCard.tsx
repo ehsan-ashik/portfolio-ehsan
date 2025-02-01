@@ -72,15 +72,15 @@ export function ProjectCard(project: Project) {
           </div>
           <div
             id="visual"
-            className="pt-2 hidden w-6/12 lg:flex relative overflow-x-visible"
+            className="pt-2 hidden w-6/12 lg:flex overflow-x-visible"
           >
             {project.visual_type === 'image' ? (
               <Image
                 alt="project supporting image"
-                width={1500}
-                height={1000}
+                width={1920}
+                height={1920}
                 src={project.visual_link}
-                className={`min-w-[30rem] min-h-[20rem] absolute ${project.rank % 2 ? `left-0` : `right-0`} border-4 border-muted-foreground `}
+                className={`w-full h-fit border-4 border-muted-foreground `}
               />
             ) : null}
           </div>

@@ -14,7 +14,7 @@ export const herodata = {
   
   "title": `Hi there! I'm \n\n**${profiledata.name}**`,
   "hero_desc_parts": [
-    "I'm a **former software engineer** and **current PhD candidate** in Univerity of Connecticut with a passion for learning, building, and problem-solving. My journey began in computer science, where I discovered the transformative power of programming and developed confidence through hands-on projects like a [GUI-based Tic-Tac-Toe game](https://ehsan-ashik.github.io/tic-tac-toe-unity-game/) and a [3D model of the Taj Mahal](https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/white-light-2.PNG).",
+    "I'm a **former software engineer** and **current PhD candidate** at Univerity of Connecticut with a passion for learning, building, and problem-solving. My journey began in computer science, where I discovered the transformative power of programming and developed confidence through hands-on projects like a [GUI-based Tic-Tac-Toe game](https://ehsan-ashik.github.io/tic-tac-toe-unity-game/) and a [3D model of the Taj Mahal](https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/white-light-2.PNG).",
 
     "In my career, I progressed from software engineer to senior roles, mastering backend architecture, scalable code design, and agile methodologies while mentoring others along the way. My current research in usable security and privacy combines my technical skills with a human-centered approach, exploring how people interact with security and privacy tools.",
 
@@ -42,13 +42,13 @@ export const skillsdata = [
   {
     "category": "Programming Language",
     "values": [
-      "Python", "Java", "C#", "C/C++"
+      "Python", "Java", "C#", "Go", "C/C++"
     ]
   },
   {
     "category": "Database",
     "values": [
-      "SQL Server", "MySQL", "MongoDB"
+      "MS SQL Server", "PostgreSQL", "MySQL", "MongoDB"
     ]
   },
   {
@@ -64,7 +64,7 @@ export const skillsdata = [
     ]
   },
   {
-    "category": "Cloud Repository",
+    "category": "Project Repository",
     "values": [
       "GitHub", "Bitbucket"
     ]
@@ -100,42 +100,35 @@ export const skillsdata = [
     ]
   },
   {
+    "category": "Cloud Providers",
+    "values": [
+      "AWS", "Azure"
+    ]
+  },
+  {
     "category": "Others",
     "values": [
-      "Docker", "AWS", "Telerik Winforms", "NUnit", "Shell"
+      "Docker", "Telerik Winforms", "NUnit", "NLog", "Shell"
     ]
   },
 ]
 
 export const projectsdata = [
   {
-    "rank": 3,
+    "rank": 1,
     "visible": true,
-    "title": "Amazon Product Review Scraping and Parsing Toolkit",
-    "description": "This application streamlines the retrieval of user reviews for Amazon products, offering flexible options to filter reviews by multiple criteria supported by Amazon. Additionally, it enables targeted review searches based on specific keywords. The tool also features built-in functionality to parse and export the collected data into JSON or CSV formats, making it easy to analyze and integrate into other workflows.",
-    "github_link": "https://github.com/ehsan-ashik/amazon-product-review-scraper",
-    "stack": [ "Python", "Poetry", "Beautiful Soup 4"],
+    "title": "Fullstack Job Application Tracker",
+    "description": "A fullstack web application to track job applications. Backend includes a robust REST API service built with Go to manage job applications, resumes, and related resources. This backend provides a comprehensive solution for tracking job applications with support for resume storage in Azure Blob Storage. The backend complements with a modern React-Admin based frontend application for managing job applications. This client application provides an intuitive interface for tracking job applications, managing resumes, and organizing company interactions.",
+    "github_link": "https://github.com/ehsan-ashik/go-job-tracker-api",
+    "stack": [ "Go", "React-Admin", "Node.js", "Azure"],
     "additional_link_title": "",
     "additional_link": "",
     "visual_type": "image",
-    "visual_link": "/images/scraper.png",
+    "visual_link": "/images/jobtracker.png",
   },
 
   {
     "rank": 2,
-    "visible": true,
-    "title": "Tic-Tac-Toe Game",
-    "description": "This project recreates the iconic Tic-Tac-Toe game, designed for an engaging player experience against a sophisticated AI opponent. Players can choose from three difficulty levels—*Normal*, *Hard*, and the ultimate challenge, *Unbeatable*. The AI opponent brings a new level of strategic depth, leveraging the [Minimax algorithm with Alpha-Beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) to evaluate optimal moves and anticipate the player's strategy. Each level offers a unique challenge, from casual gameplay to a flawless opponent that's hard (impossible) to beat.",
-    "github_link": "https://github.com/ehsan-ashik/tic-tac-toe",
-    "stack": [ "C#", "Unity 2D"],
-    "additional_link_title": "Play Game",
-    "additional_link": "https://ehsan-ashik.github.io/tic-tac-toe-unity-game/",
-    "visual_type": "image",
-    "visual_link": "/images/tictactoe.png",
-  },
-
-  {
-    "rank": 1,
     "visible": true,
     "title": "Amazon Mechanical Turk Requester API Helpers",
     "description": "This .NET application serves as a powerful toolkit for advanced requester tasks on [Amazon Mechanical Turk (MTurk)](https://www.mturk.com/). Equipped with a curated set of helper functions, it allows users to programmatically handle *requester* tasks that go beyond the capabilities of the standard MTurk Web Requester Portal. Additionally, the app supports exporting *worker* data into Excel sheets based on *QualificationTypes*, making it convenient to organize and analyze worker information. Further, the app includes a robust logging system for sensitive tasks, such as sending emails to workers.",
@@ -148,20 +141,33 @@ export const projectsdata = [
   },
 
   {
-    "rank": 6,
+    "rank": 3,
     "visible": true,
-    "title": "Smart-on-FHIR Client Portal",
-    "description": "This client portal application is designed to support [FHIR (Fast Healthcare Interoperability Resources) standards](https://www.hl7.org/fhir/overview.html), integrating various essential resources like *Practitioner*, *Patient*, and *Patient Observations*. On the backend, it supports secure authentication with [Logica EHR sandbox](https://sandbox.logicahealth.org/dashboard), ensuring reliable access to health data. For added resilience, the app includes a fallback mechanism to a local FHIR server (if available), allowing uninterrupted service when remote server authentication or authorization encounters issues. This ensures robust and secure access to health information, enhancing usability and compliance with FHIR specifications.",
-    "github_link": "https://github.com/ehsan-ashik/smart-on-fhir-vuejs-client-portal",
-    "stack": [ "Node.js", "Vue.js"],
-    "additional_link_title": "",
-    "additional_link": "",
+    "title": "Tic-Tac-Toe Game",
+    "description": "This project recreates the iconic Tic-Tac-Toe game, designed for an engaging player experience against a sophisticated AI opponent. Players can choose from three difficulty levels—*Normal*, *Hard*, and the ultimate challenge, *Unbeatable*. The AI opponent brings a new level of strategic depth, leveraging the [Minimax algorithm with Alpha-Beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) to evaluate optimal moves and anticipate the player's strategy. Each level offers a unique challenge, from casual gameplay to a flawless opponent that's hard (impossible) to beat.",
+    "github_link": "https://github.com/ehsan-ashik/tic-tac-toe",
+    "stack": [ "C#", "Unity 2D"],
+    "additional_link_title": "Play Game",
+    "additional_link": "https://ehsan-ashik.github.io/tic-tac-toe-unity-game/",
     "visual_type": "image",
-    "visual_link": "/images/fhirportal.png",
+    "visual_link": "/images/tictactoe.png",
   },
 
   {
     "rank": 4,
+    "visible": true,
+    "title": "Amazon Product Review Scraping and Parsing Toolkit",
+    "description": "This application streamlines the retrieval of user reviews for Amazon products, offering flexible options to filter reviews by multiple criteria supported by Amazon. Additionally, it enables targeted review searches based on specific keywords. The tool also features built-in functionality to parse and export the collected data into JSON or CSV formats, making it easy to analyze and integrate into other workflows.",
+    "github_link": "https://github.com/ehsan-ashik/amazon-product-review-scraper",
+    "stack": [ "Python", "Poetry", "Beautiful Soup 4"],
+    "additional_link_title": "",
+    "additional_link": "",
+    "visual_type": "image",
+    "visual_link": "/images/scraper.png",
+  },
+
+  {
+    "rank": 5,
     "visible": true,
     "title": "15 Puzzle Game",
     "description": "This project brings the classic [15 Puzzle game](https://en.wikipedia.org/wiki/15_puzzle) to life with a Java Swing interface, offering an intuitive and interactive experience. From the main menu, clicking the *Game* button launches the puzzle, where players can shuffle the grid and take on the challenge of reordering the tiles to their original positions. Players begin with a perfectly ordered grid, giving a clear view of the goal configuration. If stuck, player can reset the grid to start again. With every move, the game tests players' strategic thinking and spatial skills, making it a fun and mentally engaging experience. A major challenge was figuring out how to host the game online as Swing apps are not web-compatible. I used [Webswing](https://www.webswing.org/en) to make the app web-compatible, then deployed the dockerized app in an *AWS EC2* instance.",
@@ -174,20 +180,7 @@ export const projectsdata = [
   },
 
   {
-    "rank": 7,
-    "visible": false,
-    "title": "mRNA-based Prostate Cancer Detection",
-    "description": "In this project, I trained micro RNA-based classification models to accurately identify prostate cancer. Prostate cancer is one of the common cancer types. While some types of prostate cancer grow slowly and may not need only minimal or no treatment, some other types can be very aggressive and can grow quickly. Best fitted trained model performed well for classification task, with over 95% accuracy.",
-    "github_link": "https://github.com/ehsan-ashik/prostate-cancer-classification",
-    "stack": ["R"],
-    "additional_link_title": "View Report",
-    "additional_link": "https://github.com/ehsan-ashik/prostate-cancer-classification/blob/main/CSE_5713___Data_Mining___Project_Report.pdf",
-    "visual_type": "image",
-    "visual_link": "/images/tictactoe.png",
-  },
-
-  {
-    "rank": 5,
+    "rank": 6,
     "visible": true,
     "title": "3D Render of the Mega Structure Taj Mahal",
     "description": "This Windows application brings [the majestic Taj Mahal](https://en.wikipedia.org/wiki/Taj_Mahal) to life in 3D, allowing users to explore the architectural marvel from numerous viewpoints. With ambient lighting and optional white and blue point lights, the app creates a captivating atmosphere, casting dynamic shadows and illuminating the monument's intricate details. Users can rotate the light sources 360 degrees, enhancing the visual depth and realism of the scene. Additionally, keyboard camera controls let users navigate the 3D space, offering exploration of the structure from different viewpoints.",
@@ -197,6 +190,32 @@ export const projectsdata = [
     "additional_link": "https://github.com/ehsan-ashik/Tajmahal-3D-renderer/blob/main/rendered%20images/blue-light-1.PNG",
     "visual_type": "image",
     "visual_link": "/images/tajmahal.png",
+  },
+
+  {
+    "rank": 7,
+    "visible": true,
+    "title": "Smart-on-FHIR Client Portal",
+    "description": "This client portal application is designed to support [FHIR (Fast Healthcare Interoperability Resources) standards](https://www.hl7.org/fhir/overview.html), integrating various essential resources like *Practitioner*, *Patient*, and *Patient Observations*. On the backend, it supports secure authentication with [Logica EHR sandbox](https://sandbox.logicahealth.org/dashboard), ensuring reliable access to health data. For added resilience, the app includes a fallback mechanism to a local FHIR server (if available), allowing uninterrupted service when remote server authentication or authorization encounters issues. This ensures robust and secure access to health information, enhancing usability and compliance with FHIR specifications.",
+    "github_link": "https://github.com/ehsan-ashik/smart-on-fhir-vuejs-client-portal",
+    "stack": [ "Node.js", "Vue.js"],
+    "additional_link_title": "",
+    "additional_link": "",
+    "visual_type": "image",
+    "visual_link": "/images/fhirportal.png",
+  },
+
+  {
+    "rank": 8,
+    "visible": false,
+    "title": "mRNA-based Prostate Cancer Detection",
+    "description": "In this project, I trained micro RNA-based classification models to accurately identify prostate cancer. Prostate cancer is one of the common cancer types. While some types of prostate cancer grow slowly and may not need only minimal or no treatment, some other types can be very aggressive and can grow quickly. Best fitted trained model performed well for classification task, with over 95% accuracy.",
+    "github_link": "https://github.com/ehsan-ashik/prostate-cancer-classification",
+    "stack": ["R"],
+    "additional_link_title": "View Report",
+    "additional_link": "https://github.com/ehsan-ashik/prostate-cancer-classification/blob/main/CSE_5713___Data_Mining___Project_Report.pdf",
+    "visual_type": "image",
+    "visual_link": "/images/tictactoe.png",
   },
 ]
 
@@ -261,7 +280,7 @@ export const researchdata = [
     "additional_link_title": "",
     "additional_link": "",
     "visual_type": "image",
-    "remark": "The paper based on this project is currently under review.",
+    "remark": "The paper based on this project is accepted for publication at 2025 ACM CHI Conference on Human Factors in Computing Systems.",
     "visual_link": "/images/wtp_plan.png",
   },
 
