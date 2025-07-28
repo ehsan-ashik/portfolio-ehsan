@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -9,8 +9,6 @@ import { Button } from './ui/button';
 import { ExternalLink } from 'lucide-react';
 import { MdEmail } from 'react-icons/md';
 import { useToast } from '@/hooks/use-toast';
-
-
 
 export function Hero() {
   const { toast } = useToast();
@@ -42,7 +40,7 @@ export function Hero() {
           <div className="group relative flex justify-center">
             <Button
               onClick={() => {
-                navigator.clipboard.writeText(profiledata.official_email);
+                navigator.clipboard.writeText(profiledata.personal_email);
                 toast({
                   description: 'Email copied to clipboard!'
                 });

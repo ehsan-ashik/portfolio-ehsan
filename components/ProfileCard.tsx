@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 import React from 'react';
@@ -29,7 +29,7 @@ export function ProfileCard() {
         <div className="font-light text-sm">{profiledata.headline}</div>
         <div className=" pt-2 flex gap-1 items-center text-sm opacity-80">
           <MdEmail className="h-4 w-4 opacity-90" />
-          <span>{profiledata.official_email}</span>
+          <span>{profiledata.personal_email}</span>
         </div>
         <div className=" pt-2 flex gap-1 items-center text-sm opacity-80">
           <FaLocationDot className="h-4 w-4 opacity-90" />
