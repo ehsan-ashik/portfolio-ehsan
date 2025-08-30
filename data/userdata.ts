@@ -290,11 +290,10 @@ export const researchdata = [
     title: "How Do Users' Decide to Update Software?",
     description:
       'This research explores why some users are more likely to update their software than others. While factors like update type (security vs. performance) and required restarts were not significant, trust in the software provider emerged as a key influence. Interestingly, those who intended to update often experienced higher levels of cognitive dissonance, suggesting that the decision to update can be a complex psychological process',
-    paper_link: '',
+    paper_link: 'https://doi.org/10.1109/COMPSAC65507.2025.00078',
     stack: ['SPSS'],
     additional_link_title: '',
     additional_link: '',
-    remark: 'Online version of the paper will be available soon',
     visual_type: 'slides',
     visual_link: `<iframe
               src="https://docs.google.com/presentation/d/1_hc6g_IbHowiWpjJLxkgMDVZN38yu2fOj6i0N6SQsOE/embed?start=false&loop=false&delayms=60000" frameborder="10" width="442" height="285"
