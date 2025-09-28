@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import { profiledata } from '@/data/userdata';
 import { FaGithub, FaLinkedin, FaInstagramSquare } from 'react-icons/fa';
+import { FaGoogleScholar } from "react-icons/fa6";
 import { SiLeetcode } from 'react-icons/si';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
@@ -49,6 +50,13 @@ export function ProfileCard() {
             rel="noopener noreferrer"
           >
             <FaLinkedin className="h-[1.2rem] w-[1.2rem] opacity-80 hover:opacity-100" />
+          </a>
+          <a
+            href={profiledata.google_scholar_url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGoogleScholar className="h-[1.2rem] w-[1.2rem] opacity-80 hover:opacity-100" />
           </a>
           <a
             href={profiledata.leetcode_url}

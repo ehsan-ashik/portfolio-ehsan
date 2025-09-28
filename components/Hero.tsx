@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGoogleScholar } from "react-icons/fa6";
 import ReactMarkdown from 'react-markdown';
 import { profiledata, herodata } from '@/data/userdata';
 import { NunitoSansFont } from '@/app/fonts';
@@ -56,21 +57,21 @@ export function Hero() {
             </span>
           </div>
           <a
-            href={profiledata.github_url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="outline" size="icon" className="rounded-full">
-              <FaGithub className="h-[1.2rem] w-[1.2rem] opacity-80" />
-            </Button>
-          </a>
-          <a
             href={profiledata.linkedin_url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button variant="outline" size="icon" className="rounded-full">
               <FaLinkedin className="h-[1.2rem] w-[1.2rem] opacity-80" />
+            </Button>
+          </a>
+          <a
+            href={profiledata.google_scholar_url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" size="icon" className="rounded-full">
+              <FaGoogleScholar className="h-[1.2rem] w-[1.2rem] opacity-80" />
             </Button>
           </a>
         </div>

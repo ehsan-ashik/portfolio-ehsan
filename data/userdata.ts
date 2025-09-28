@@ -1,6 +1,6 @@
 export const profiledata = {
   name: 'Ehsan Ul Haque',
-  headline: 'Softwaere Engineer @Meta',
+  headline: 'Software Engineer @Meta',
   location: 'California, USA',
   official_email: 'ehsanu@meta.com',
   personal_email: 'ashik.buet10@gmail.com',
@@ -8,7 +8,8 @@ export const profiledata = {
   github_url: 'https://github.com/ehsan-ashik',
   leetcode_url: 'https://leetcode.com/u/ehaque052/',
   instagram_url:
-    'https://www.instagram.com/ehsan.ashik/?igsh=MTZwdnF2NmZheTJxdA%3D%3D'
+    'https://www.instagram.com/ehsan.ashik/?igsh=MTZwdnF2NmZheTJxdA%3D%3D',
+  google_scholar_url: 'https://scholar.google.com/citations?user=xRRerFIAAAAJ&hl=en'
 };
 
 export const herodata = {
