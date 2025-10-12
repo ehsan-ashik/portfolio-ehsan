@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import { ProfileCard } from '@/components/ProfileCard';
+import { SkillsCard } from '@/components/SkillsCard';
 import { aboutdata } from '@/data/userdata';
 import React from 'react';
 
@@ -18,6 +19,8 @@ export default function Page() {
             {part}
           </ReactMarkdown>
         ))}
+        <div className="pt-10 border-t border-border mt-8"></div>
+        <SkillsCard />
       </div>
     </section>
   );

@@ -2,6 +2,55 @@
 
 This document tracks all changes, features, and improvements made to the Portfolio Website of Ehsan Ul Haque.
 
+## Version 1.1.0 - Skills Section Redesign & Project Showcase
+
+### 🚀 New Features
+
+#### **Project Showcase on Homepage**
+- **ProjectOverviewCard Component** - Minimal, stylish cards for individual project previews
+- **ProjectShowcase Component** - Container component displaying 3 randomly selected projects
+- **Dynamic Project Selection** - Uses Fisher-Yates shuffle algorithm for random project rotation
+- **Homepage Integration** - Added project showcase section after hero with visual separator
+- **Smart Content Truncation** - Brief descriptions with "See more" links to projects page
+- **Technology Stack Preview** - Shows first 2 tech stack badges with inline overflow indicator
+- **Uniform Card Layout** - Fixed heights for titles (2 lines) and descriptions with ellipsis truncation
+- **Responsive Grid Layout** - 1 column on mobile, 2 on tablet, 3 on desktop
+- **Hover Interactions** - Subtle animations and color transitions for better UX
+
+#### **Research Overview on Homepage**
+- **ResearchOverview Component** - Reuses ProjectOverviewCard for consistent design language
+- **Dynamic Research Selection** - Randomly displays 3 research papers using Fisher-Yates shuffle
+- **Flexible Card Component** - Enhanced ProjectOverviewCard with configurable link destinations
+- **Research Integration** - Added research showcase section after projects with visual separator
+- **Consistent UX** - Same card styling and interactions as project cards
+- **Academic Focus** - Highlights recent contributions in usable security and privacy research
+
+### 🎨 UI/UX Improvements
+
+#### **SkillsCard Component Redesign**
+- **Resume-Style Layout** - Transformed skills display from badge-based to resume-style format
+- **Compact Design** - Reduced space usage with category: comma-separated skills format
+- **Skills Consolidation** - Merged 12 categories into 4 logical groups for cleaner presentation:
+  - **Programming & Development**: Languages, frameworks, and development tools
+  - **Data & Analytics**: Databases, ML/AI, and statistical analysis tools
+  - **DevOps & Cloud**: CI/CD, cloud platforms, and deployment tools
+  - **Project & Collaboration Tools**: Version control, project management, and team tools
+- **Meta Tech Stack Addition** - Added current Meta technologies:
+  - **PHP/Hack**: Meta's primary backend language
+  - **Ent Framework**: Go-based entity framework for backend development
+  - **GraphQL**: API query language for efficient data fetching
+  - **Relay**: React framework for building data-driven applications
+- **Component Repositioning** - Moved SkillsCard from home page to about page:
+  - **Better Context**: Skills now appear alongside personal story and background
+  - **Cleaner Home Page**: Home page now focuses solely on hero introduction
+  - **Visual Separation**: Added border separator before skills section on about page
+- **Enhanced Mobile Responsiveness** - Improved text sizing and spacing for mobile devices
+- **Better Typography** - Optimized font sizes and line spacing for readability
+- **Consistent Spacing** - Uniform spacing between skill categories
+- **Text Wrapping** - Proper text wrapping for long skill lists on smaller screens
+
+---
+
 ## Version 1.0.0 - Initial Release
 
 ### 🚀 Core Features

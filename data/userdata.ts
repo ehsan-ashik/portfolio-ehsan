@@ -43,53 +43,17 @@ export const aboutdata = {
 
 export const skillsdata = [
   {
-    category: 'Programming Language',
-    values: ['Python', 'Java', 'C#', 'Go', 'C/C++']
+    category: 'Programming & Development',
+    values: ['PHP/Hack', 'Python', 'Java', 'C#', 'Go', 'C/C++', 'Next.js', 'React.js', 'Vue.js', 'Tailwind', 'GraphQL', 'Relay', 'Ent Framework', 'Unity', 'Telerik Winforms', 'Git']
   },
   {
-    category: 'Database',
-    values: ['MS SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB']
+    category: 'Data & Analytics',
+    values: ['MS SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB', 'PyTorch', 'LangChain', 'HuggingFace', 'Scikit-Learn', 'R', 'SPSS']
   },
   {
-    category: 'Version Control',
-    values: ['Git', 'TFS']
+    category: 'DevOps & Cloud',
+    values: ['AWS', 'Azure', 'Docker', 'TeamCity', 'Octopus', 'GitHub Actions', 'Shell']
   },
-  {
-    category: 'Project Management',
-    values: ['Jira', 'Teamwork', 'Trello']
-  },
-  {
-    category: 'Project Repository',
-    values: ['GitHub', 'Bitbucket']
-  },
-  {
-    category: 'CI/CD',
-    values: ['TeamCity', 'Octopus', 'GitHub Actions']
-  },
-  {
-    category: 'Graphics Fremwork',
-    values: ['Unity', 'OpenGL']
-  },
-  {
-    category: 'Web',
-    values: ['Next.js', 'React.js', 'Vue.js', 'Tailwind']
-  },
-  {
-    category: 'Statistical Analysis',
-    values: ['Python', 'R', 'SPSS']
-  },
-  {
-    category: 'ML/AI',
-    values: ['PyTorch', 'LangChain', 'HuggingFace', 'Scikit-Learn']
-  },
-  {
-    category: 'Cloud Providers',
-    values: ['AWS', 'Azure']
-  },
-  {
-    category: 'Others',
-    values: ['Docker', 'Telerik Winforms', 'NUnit', 'NLog', 'Shell']
-  }
 ];
 
 export const projectsdata = [
