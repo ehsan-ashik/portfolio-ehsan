@@ -20,12 +20,12 @@ export function ResearchOverview() {
   const featuredResearch = shuffleArray(visibleResearch).slice(0, 3);
 
   return (
-    <section className="py-12">
+    <section className="py-10">
       <div className="mb-8">
-        <h2 className={`${NunitoSansFont.className} text-2xl font-bold opacity-90`}>
+        <h2 className={`${NunitoSansFont.className} text-2xl font-bold opacity-95`}>
           Featured Research
         </h2>
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="font-light opacity-90 pt-2">
           Recent research contributions in usable security and privacy. For a complete list, see <Link href="/research">research page</Link>.
         </p>
       </div>

@@ -14,18 +14,18 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export function ProjectShowcase() {
+export function ProjectOverview() {
   // Get all visible projects and randomly select 3
   const visibleProjects = projectsdata.filter(project => project.visible);
   const featuredProjects = shuffleArray(visibleProjects).slice(0, 3);
 
   return (
-    <section className="py-12">
+    <section className="py-10">
       <div className="mb-8">
-        <h2 className={`${NunitoSansFont.className} text-2xl font-bold opacity-90`}>
+        <h2 className={`${NunitoSansFont.className} text-2xl font-bold opacity-95`}>
           Featured Projects
         </h2>
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="font-light opacity-90 pt-2">
           A selection of projects I've built. For a complete list, see <Link href="/projects">projects page</Link>.
         </p>
       </div>

@@ -6,9 +6,9 @@ This document tracks all changes, features, and improvements made to the Portfol
 
 ### 🚀 New Features
 
-#### **Project Showcase on Homepage**
+#### **Project Overview on Homepage**
 - **ProjectOverviewCard Component** - Minimal, stylish cards for individual project previews
-- **ProjectShowcase Component** - Container component displaying 3 randomly selected projects
+- **ProjectOverview Component** - Container component displaying 3 randomly selected projects
 - **Dynamic Project Selection** - Uses Fisher-Yates shuffle algorithm for random project rotation
 - **Homepage Integration** - Added project showcase section after hero with visual separator
 - **Smart Content Truncation** - Brief descriptions with "See more" links to projects page

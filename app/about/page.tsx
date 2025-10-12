@@ -19,7 +19,7 @@ export default function Page() {
             {part}
           </ReactMarkdown>
         ))}
-        <div className="pt-10 border-t border-border mt-8"></div>
+        <div className="pt-10 border-t border-border mt-16"></div>
         <SkillsCard />
       </div>
     </section>
