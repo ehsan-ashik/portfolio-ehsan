@@ -1,6 +1,7 @@
 import { Hero } from '@/components/Hero';
 import { ProjectOverview } from '@/components/ProjectOverview';
 import { ResearchOverview } from '@/components/ResearchOverview';
+import { Contact } from '@/components/Contact';
 import React from 'react';
 
 export default function Page() {
@@ -11,6 +12,8 @@ export default function Page() {
       <ProjectOverview />
       <div className='pt-6 border-b border-border'></div>
       <ResearchOverview />
+      <div className='pt-6 border-b border-border'></div>
+      <Contact />
     </>
   );
 }
