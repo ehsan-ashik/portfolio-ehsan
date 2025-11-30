@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo } from 'react';
+import React, { createContext, useContext, useEffect, useMemo } from 'react';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { type ThemeProviderProps } from 'next-themes/dist/types';
 import { themes } from '../index';
@@ -9,6 +9,17 @@ import type { ThemeConfig, ColorScheme } from './types';
 interface ThemeRegistryProps extends Omit<ThemeProviderProps, 'children'> {
     visualTheme?: string;  // Which visual theme to use (e.g., 'default' or 'glass-refraction')
     children: React.ReactNode;
+}
+
+// Create context for visual theme ID (safe for SSR)
+const VisualThemeContext = createContext<string>('default');
+
+/**
+ * Hook to get current visual theme ID
+ * Safe for SSR - returns same value on server and client
+ */
+export function useVisualTheme() {
+    return useContext(VisualThemeContext);
 }
 
 /**
@@ -26,7 +37,7 @@ export function ThemeRegistry({
         return themes[visualTheme] || themes.default;
     }, [visualTheme]);
 
-    // Inject CSS variables when theme changes
+    // Inject CSS variables when theme changes (client-side only)
     useEffect(() => {
         injectThemeVariables(theme);
 
@@ -50,9 +61,11 @@ export function ThemeRegistry({
     }, [theme]);
 
     return (
-        <NextThemeProvider {...themeProviderProps}>
-            {children}
-        </NextThemeProvider>
+        <VisualThemeContext.Provider value={theme.id}>
+            <NextThemeProvider {...themeProviderProps}>
+                {children}
+            </NextThemeProvider>
+        </VisualThemeContext.Provider>
     );
 }
 

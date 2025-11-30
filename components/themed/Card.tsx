@@ -2,29 +2,33 @@
 
 import * as React from 'react';
 import { cn } from '@/lib/utils';
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
+import { defaultCardClasses } from '@/themes/default/card-styles';
+import { glassCardClasses } from '@/themes/glass-refraction/card-styles';
 
 /**
  * Theme-aware Card Components
  * 
- * Automatically apply glass effect when glass-refraction theme is active.
+ * Theme styles are defined in themes/[theme-name]/card-styles.ts
  */
 
 const Card = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-    // Check if glass-refraction theme is active
-    const isGlassTheme = typeof document !== 'undefined' &&
-        document.documentElement.getAttribute('data-visual-theme') === 'glass-refraction';
+    // Get current visual theme from context (SSR-safe)
+    const visualTheme = useVisualTheme();
+
+    // Get theme-specific classes
+    const themeClasses = visualTheme === 'glass-refraction' ? glassCardClasses : defaultCardClasses;
 
     return (
         <div
             ref={ref}
             className={cn(
                 'rounded-lg border text-card-foreground shadow-sm',
-                isGlassTheme
-                    ? 'bg-card/70 backdrop-blur-lg border-border/30 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/15 hover:-translate-y-0.5 transition-all duration-150'
-                    : 'bg-card',
+                themeClasses.base,
+                themeClasses.hover,
                 className
             )}
             {...props}

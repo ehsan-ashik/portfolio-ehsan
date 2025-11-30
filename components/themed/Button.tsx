@@ -4,12 +4,15 @@ import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
+import { defaultButtonClasses } from '@/themes/default/button-styles';
+import { glassButtonClasses, glassVariantOverrides } from '@/themes/glass-refraction/button-styles';
 
 /**
  * Theme-aware Button Component
  * 
  * Extends shadcn Button with theme-specific styling.
- * Automatically applies glass effect when glass-refraction theme is active.
+ * Theme styles are defined in themes/[theme-name]/button-styles.ts
  */
 
 const buttonVariants = cva(
@@ -26,7 +29,7 @@ const buttonVariants = cva(
                     'bg-secondary text-secondary-foreground hover:bg-secondary/80',
                 ghost: 'hover:bg-accent hover:text-accent-foreground',
                 link: 'text-primary underline-offset-4 transition ease-in-out hover:underline',
-                // Glass variant for glass-refraction theme
+                // Glass variant (used by glass-refraction theme)
                 glass: 'backdrop-blur-md bg-background/70 border border-border/50 hover:bg-background/80 hover:-translate-y-0.5 transition-all duration-150',
             },
             size: {
@@ -53,18 +56,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant, size, asChild = false, ...props }, ref) => {
         const Comp = asChild ? Slot : 'button';
 
-        // Check if glass-refraction theme is active
-        const isGlassTheme = typeof document !== 'undefined' &&
-            document.documentElement.getAttribute('data-visual-theme') === 'glass-refraction';
+        // Get current visual theme from context (SSR-safe)
+        const visualTheme = useVisualTheme();
 
-        // Apply glass variant if glass theme is active and no specific variant is set
-        const effectiveVariant = isGlassTheme && variant === 'default' ? 'glass' : variant;
+        // Get theme-specific classes and variant overrides
+        const themeClasses = visualTheme === 'glass-refraction' ? glassButtonClasses : defaultButtonClasses;
+        const variantOverrides = visualTheme === 'glass-refraction' ? glassVariantOverrides : {};
+
+        // Apply theme-specific variant override if exists
+        const effectiveVariant = (variantOverrides[variant || 'default'] as typeof variant) || variant;
 
         return (
             <Comp
                 className={cn(
                     buttonVariants({ variant: effectiveVariant, size, className }),
-                    isGlassTheme && 'shadow-lg shadow-black/5'
+                    themeClasses.base
                 )}
                 ref={ref}
                 {...props}
