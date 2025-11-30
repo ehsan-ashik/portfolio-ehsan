@@ -19,29 +19,29 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                // Glass primary button - main CTA with strong glass effect
+                // Glass primary - solid background with glassmorphism
                 default:
-                    "backdrop-blur-md bg-primary/80 text-primary-foreground border border-primary/30 shadow-lg shadow-primary/20 hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30",
+                    "backdrop-blur-md bg-[hsl(210,10%,23%)] dark:bg-[hsl(210,15%,75%)] text-white dark:text-black border border-white/20 dark:border-black/20 shadow-lg shadow-black/10 hover:bg-[hsl(210,10%,18%)] dark:hover:bg-[hsl(210,15%,80%)] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/20",
 
-                // Glass destructive - red-tinted glass for dangerous actions
+                // Glass destructive - muted red with good contrast
                 destructive:
-                    "backdrop-blur-md bg-destructive/70 text-destructive-foreground border border-destructive/30 shadow-lg shadow-destructive/20 hover:bg-destructive/80 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-destructive/30",
+                    "backdrop-blur-md bg-[hsl(0,45%,58%)] dark:bg-[hsl(0,50%,45%)] text-white dark:text-white border border-white/20 dark:border-white/20 shadow-lg shadow-black/10 hover:bg-[hsl(0,50%,50%)] dark:hover:bg-[hsl(0,55%,40%)] hover:-translate-y-0.5 hover:shadow-xl",
 
-                // Glass outline - subtle glass with prominent border
+                // Glass outline - translucent with dark text on light, light text on dark
                 outline:
-                    "backdrop-blur-md bg-background/50 border-2 border-border/60 hover:bg-background/70 hover:border-border/80 hover:-translate-y-0.5 shadow-sm hover:shadow-md",
+                    "backdrop-blur-md bg-white/60 dark:bg-black/40 text-[hsl(0,0%,10%)] dark:text-[hsl(0,0%,95%)] border-2 border-[hsl(0,0%,90%)] dark:border-[hsl(0,0%,20%)] hover:bg-white/80 dark:hover:bg-black/60 hover:-translate-y-0.5 shadow-sm hover:shadow-md",
 
-                // Glass secondary - lighter glass effect
+                // Glass secondary - light gray glass
                 secondary:
-                    "backdrop-blur-lg bg-secondary/60 text-secondary-foreground border border-secondary/30 shadow-md shadow-black/5 hover:bg-secondary/70 hover:-translate-y-0.5",
+                    "backdrop-blur-lg bg-[hsl(0,0%,96%)]/90 dark:bg-[hsl(0,0%,15%)]/90 text-[hsl(0,0%,15%)] dark:text-[hsl(0,0%,95%)] border border-black/10 dark:border-white/10 shadow-md shadow-black/5 hover:bg-[hsl(0,0%,94%)] dark:hover:bg-[hsl(0,0%,18%)] hover:-translate-y-0.5",
 
-                // Glass ghost - minimal glass, appears on hover
+                // Glass ghost - only appears on hover
                 ghost:
-                    "hover:backdrop-blur-md hover:bg-accent/50 hover:text-accent-foreground hover:-translate-y-0.5 transition-all duration-150",
+                    "text-[hsl(0,0%,10%)] dark:text-[hsl(0,0%,95%)] hover:backdrop-blur-md hover:bg-[hsl(30,5%,95%)]/70 dark:hover:bg-[hsl(210,10%,20%)]/70 hover:text-[hsl(0,0%,15%)] dark:hover:text-[hsl(0,0%,95%)] hover:-translate-y-0.5",
 
-                // Glass link - underline with subtle glass on hover
+                // Glass link - primary color text
                 link:
-                    "text-primary underline-offset-4 hover:underline hover:backdrop-blur-sm hover:bg-primary/5 px-1 -mx-1 rounded transition-all duration-150",
+                    "text-[hsl(210,10%,23%)] dark:text-[hsl(210,15%,75%)] underline-offset-4 hover:underline hover:backdrop-blur-sm hover:bg-[hsl(210,10%,23%)]/10 dark:hover:bg-[hsl(210,15%,75%)]/10 px-1 -mx-1 rounded",
             },
             size: {
                 default: "h-10 px-4 py-2",
