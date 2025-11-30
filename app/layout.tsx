@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeRegistry } from '@/themes/core/ThemeRegistry';
 import { InterFont } from './fonts';
 
 import './globals.css';
@@ -22,7 +22,8 @@ export default function RootLayout({
       <body
         className={`${InterFont.className} text-base antialiased bg-background text-foreground`}
       >
-        <ThemeProvider
+        <ThemeRegistry
+          visualTheme="default"  // Change to "glass-refraction" to switch themes
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
@@ -33,7 +34,7 @@ export default function RootLayout({
             <main className="flex-1 p-2">{children}</main>
             <Footer />
           </div>
-        </ThemeProvider>
+        </ThemeRegistry>
         <Toaster />
       </body>
     </html>
