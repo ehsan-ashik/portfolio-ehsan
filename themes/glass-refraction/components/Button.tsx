@@ -18,29 +18,29 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                // Glass primary - MORE visible glow with white shadow
+                // Glass primary - VERY visible hover
                 default:
-                    "backdrop-blur-xl bg-white/20 dark:bg-white/10 text-black dark:text-white border border-white/40 dark:border-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.1)] hover:bg-white/40 dark:hover:bg-white/25 hover:border-white/80 dark:hover:border-white/50 hover:shadow-[0_8px_32px_rgba(255,255,255,0.4),0_0_0_1px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_8px_32px_rgba(255,255,255,0.2),0_0_0_1px_rgba(255,255,255,0.3)] hover:brightness-110",
+                    "backdrop-blur-xl bg-white/20 dark:bg-white/10 text-black dark:text-white border border-white/40 dark:border-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.1)] hover:bg-white/60 dark:hover:bg-white/40 hover:border-white/95 hover:border-2 hover:shadow-[0_12px_48px_rgba(255,255,255,0.6),0_0_0_2px_rgba(255,255,255,0.4)] dark:hover:shadow-[0_12px_48px_rgba(255,255,255,0.4),0_0_0_2px_rgba(255,255,255,0.5)] hover:brightness-125",
 
-                // Glass destructive - strong red glow
+                // Glass destructive - strong visible hover
                 destructive:
-                    "backdrop-blur-xl bg-red-500/20 dark:bg-red-500/15 text-red-900 dark:text-red-100 border border-red-500/40 dark:border-red-500/30 shadow-[0_4px_16px_rgba(239,68,68,0.15)] hover:bg-red-500/40 dark:hover:bg-red-500/30 hover:border-red-500/80 hover:shadow-[0_8px_32px_rgba(239,68,68,0.4)] hover:brightness-110",
+                    "backdrop-blur-xl bg-red-500/20 dark:bg-red-500/15 text-red-900 dark:text-red-100 border border-red-500/40 dark:border-red-500/30 shadow-[0_4px_16px_rgba(239,68,68,0.15)] hover:bg-red-500/60 dark:hover:bg-red-500/50 hover:border-red-500/95 hover:border-2 hover:shadow-[0_12px_48px_rgba(239,68,68,0.6)] hover:brightness-120",
 
-                // Glass outline - consistent border with other variants
+                // Glass outline - VERY visible hover
                 outline:
-                    "backdrop-blur-lg bg-white/10 dark:bg-white/5 text-black dark:text-white border border-white/40 dark:border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-white/30 dark:hover:bg-white/20 hover:border-white/60 dark:hover:border-white/50 hover:shadow-[0_6px_24px_rgba(255,255,255,0.25)] dark:hover:shadow-[0_6px_24px_rgba(255,255,255,0.15)]",
+                    "backdrop-blur-lg bg-white/10 dark:bg-white/5 text-black dark:text-white border border-white/40 dark:border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-white/50 dark:hover:bg-white/35 hover:border-white/95 hover:border-2 hover:shadow-[0_12px_48px_rgba(255,255,255,0.5)] dark:hover:shadow-[0_12px_48px_rgba(255,255,255,0.3)]",
 
-                // Glass secondary - light glow
+                // Glass secondary - visible hover
                 secondary:
-                    "backdrop-blur-lg bg-white/15 dark:bg-white/8 text-black dark:text-white border border-white/30 dark:border-white/15 shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-white/35 dark:hover:bg-white/20 hover:border-white/60 hover:shadow-[0_6px_24px_rgba(255,255,255,0.3)] hover:brightness-110",
+                    "backdrop-blur-lg bg-white/15 dark:bg-white/8 text-black dark:text-white border border-white/30 dark:border-white/15 shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-white/55 dark:hover:bg-white/35 hover:border-white/90 hover:border-2 hover:shadow-[0_12px_48px_rgba(255,255,255,0.5)] hover:brightness-115",
 
-                // Glass ghost - glow appears on hover
+                // Glass ghost - visible glow on hover
                 ghost:
-                    "text-black dark:text-white hover:backdrop-blur-lg hover:bg-white/25 dark:hover:bg-white/20 hover:border hover:border-white/50 dark:hover:border-white/40 hover:shadow-[0_4px_20px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)] transition-all duration-300",
+                    "text-black dark:text-white hover:backdrop-blur-lg hover:bg-white/45 dark:hover:bg-white/35 hover:border-white/90 hover:border-2 hover:shadow-[0_8px_36px_rgba(255,255,255,0.4)] dark:hover:shadow-[0_8px_36px_rgba(255,255,255,0.3)] transition-all duration-300",
 
                 // Glass link - minimal glow
                 link:
-                    "text-black dark:text-white underline-offset-4 hover:underline hover:backdrop-blur-sm hover:bg-white/15 dark:hover:bg-white/10 hover:brightness-110 px-2 -mx-2 rounded-full",
+                    "text-black dark:text-white underline-offset-4 hover:underline hover:backdrop-blur-sm hover:bg-white/20 dark:hover:bg-white/15 hover:brightness-115 px-2 -mx-2 rounded-full",
             },
             size: {
                 default: "h-10 px-8 py-2",

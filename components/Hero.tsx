@@ -32,7 +32,7 @@ export function Hero() {
 
       <div className="pt-8 flex flex-col md:flex-row gap-3 items-center md:justify-start">
         <a href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
-          <Button variant="default" className=" rounded-full px-10 flex gap-2">
+          <Button variant="default" className=" rounded-full flex gap-2">
             <ExternalLink className="w-[1.2rem] h-[1.2rem]" />
             <span>View Resume</span>
           </Button>
@@ -61,7 +61,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline" size="icon" className="rounded-full">
+            <Button variant="outline" size="icon">
               <FaLinkedin className="h-[1.2rem] w-[1.2rem] opacity-80" />
             </Button>
           </a>
@@ -70,7 +70,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline" size="icon" className="rounded-full">
+            <Button variant="outline" size="icon">
               <FaGoogleScholar className="h-[1.2rem] w-[1.2rem] opacity-80" />
             </Button>
           </a>
