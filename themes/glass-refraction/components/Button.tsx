@@ -26,9 +26,9 @@ const buttonVariants = cva(
                 destructive:
                     "backdrop-blur-xl bg-red-500/20 dark:bg-red-500/15 text-red-900 dark:text-red-100 border border-red-500/40 dark:border-red-500/30 shadow-[0_4px_16px_rgba(239,68,68,0.15)] hover:bg-red-500/40 dark:hover:bg-red-500/30 hover:border-red-500/80 hover:shadow-[0_8px_32px_rgba(239,68,68,0.4)] hover:brightness-110",
 
-                // Glass outline - subtle glow
+                // Glass outline - consistent border with other variants
                 outline:
-                    "backdrop-blur-lg bg-white/10 dark:bg-white/5 text-black dark:text-white border-2 border-black/20 dark:border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-white/30 dark:hover:bg-white/20 hover:border-black/40 dark:hover:border-white/50 hover:shadow-[0_6px_24px_rgba(255,255,255,0.25)] dark:hover:shadow-[0_6px_24px_rgba(255,255,255,0.15)]",
+                    "backdrop-blur-lg bg-white/10 dark:bg-white/5 text-black dark:text-white border border-white/40 dark:border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-white/30 dark:hover:bg-white/20 hover:border-white/60 dark:hover:border-white/50 hover:shadow-[0_6px_24px_rgba(255,255,255,0.25)] dark:hover:shadow-[0_6px_24px_rgba(255,255,255,0.15)]",
 
                 // Glass secondary - light glow
                 secondary:
