@@ -6,7 +6,7 @@ import { FaGoogleScholar } from "react-icons/fa6";
 import ReactMarkdown from 'react-markdown';
 import { profiledata, herodata } from '@/data/userdata';
 import { NunitoSansFont } from '@/app/fonts';
-import { Button } from './ui/button';
+import { Button } from '@/components/themed/Button';
 import { ExternalLink } from 'lucide-react';
 import { MdEmail } from 'react-icons/md';
 import { useToast } from '@/hooks/use-toast';

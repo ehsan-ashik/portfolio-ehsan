@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button';
+import { Button } from '@/components/themed/Button';
 import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 
@@ -62,7 +62,7 @@ export function ResearchCard(project: ResearchProject) {
                 </a>
               ) : null}
               {project.additional_link !== '' &&
-              project.additional_link !== null ? (
+                project.additional_link !== null ? (
                 <a
                   href={project.additional_link}
                   target="_blank"
