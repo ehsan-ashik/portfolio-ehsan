@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown';
 import { Badge } from './ui/badge';
-import { Button } from '@/components/themed/Button';
+import { Button } from './ui/button';
 import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 

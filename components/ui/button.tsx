@@ -1,56 +1,76 @@
-import * as React from 'react';
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
+'use client';
 
-import { cn } from '@/lib/utils';
+/**
+ * Smart Button Wrapper
+ * 
+ * This component detects the active theme and exports the appropriate
+ * Button implementation from the theme's component directory.
+ * 
+ * Usage remains unchanged:
+ *   import { Button } from '@/components/ui/button'
+ *   <Button variant="default">Click me</Button>
+ */
 
-const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
-  {
-    variants: {
-      variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 transition ease-in-out hover:underline'
-      },
-      size: {
-        default: 'h-10 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-11 rounded-md px-8',
-        icon: 'h-10 w-10'
-      }
-    },
-    defaultVariants: {
-      variant: 'default',
-      size: 'default'
-    }
-  }
-);
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+// Import Button from each theme
+import {
+  Button as DefaultButton,
+  buttonVariants as defaultButtonVariants,
+  type ButtonProps
+} from '@/themes/default/components/Button';
+
+import {
+  Button as GlassButton,
+  buttonVariants as glassButtonVariants
+} from '@/themes/glass-refraction/components/Button';
+
+// Export ButtonProps for consumer convenience
+export type { ButtonProps };
+
+/**
+ * Button Component Registry
+ * Maps theme IDs to their Button implementations
+ * 
+ * To add a new theme:
+ * 1. Import the theme's Button component above
+ * 2. Add entry to this registry: 'theme-id': ThemeButton
+ */
+const BUTTON_REGISTRY = {
+  'default': DefaultButton,
+  'glass-refraction': GlassButton,
+  // Future themes go here:
+  // 'brutalist': BrutalistButton,
+  // 'gradient-mesh': GradientMeshButton,
+} as const;
+
+const BUTTON_VARIANTS_REGISTRY = {
+  'default': defaultButtonVariants,
+  'glass-refraction': glassButtonVariants,
+} as const;
+
+/**
+ * Theme-aware Button component
+ * Automatically uses the correct Button implementation based on active theme
+ */
+export function Button(props: ButtonProps) {
+  const visualTheme = useVisualTheme();
+
+  // Get Button from registry, fallback to default if theme not found
+  const ButtonComponent = BUTTON_REGISTRY[visualTheme as keyof typeof BUTTON_REGISTRY] || BUTTON_REGISTRY.default;
+
+  return <ButtonComponent {...props} />;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'button';
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
-Button.displayName = 'Button';
+/**
+ * Export buttonVariants based on current theme
+ * This is a convenience export for edge cases where direct variant access is needed
+ */
+export function useButtonVariants() {
+  const visualTheme = useVisualTheme();
+  return BUTTON_VARIANTS_REGISTRY[visualTheme as keyof typeof BUTTON_VARIANTS_REGISTRY] || defaultButtonVariants;
+}
 
-export { Button, buttonVariants };
+// For backward compatibility, export default buttonVariants
+export const buttonVariants = defaultButtonVariants;
+;
