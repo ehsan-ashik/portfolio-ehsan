@@ -58,7 +58,7 @@ export function MobileNav() {
               Mobile Navigation Menu
             </SheetDescription>
 
-            <div className="mt-8 flex flex-col gap-6 pl-2 text-left">
+            <div className="mt-8 flex flex-col gap-6 items-center text-center">
               {navitems.map((navitem) => (
                 <Link
                   href={navitem.path}
