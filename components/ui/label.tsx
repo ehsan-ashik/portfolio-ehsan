@@ -21,6 +21,7 @@ const LABEL_REGISTRY = {
 const Label = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   VariantProps<any> // Using any here as variants might differ slightly, but props are compatible
 >(({ className, ...props }, ref) => {
   const visualTheme = useVisualTheme();

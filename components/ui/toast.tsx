@@ -40,6 +40,7 @@ ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   VariantProps<any>
 >((props, ref) => {
   const Components = useToastComponents();
