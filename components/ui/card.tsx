@@ -1,79 +1,64 @@
-import * as React from "react"
+'use client';
 
-import { cn } from "@/lib/utils"
+/**
+ * Smart Card Wrapper
+ * 
+ * This component detects the active theme and exports the appropriate
+ * Card implementation from the theme's component directory.
+ */
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    )}
-    {...props}
-  />
-))
-Card.displayName = "Card"
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 
-const CardHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />
-))
-CardHeader.displayName = "CardHeader"
+// Import Card components from each theme
+import * as DefaultCard from '@/themes/default/components/Card';
+import * as GlassCard from '@/themes/glass-refraction/components/Card';
 
-const CardTitle = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
-    {...props}
-  />
-))
-CardTitle.displayName = "CardTitle"
+/**
+ * Card Component Registry
+ * Maps theme IDs to their Card implementations
+ */
+const CARD_REGISTRY = {
+  'default': DefaultCard,
+  'glass-refraction': GlassCard,
+} as const;
 
-const CardDescription = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-))
-CardDescription.displayName = "CardDescription"
+/**
+ * Theme-aware Card components
+ * Automatically uses the correct implementation based on active theme
+ */
 
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
+export function Card(props: React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>) {
+  const visualTheme = useVisualTheme();
+  const Component = CARD_REGISTRY[visualTheme as keyof typeof CARD_REGISTRY]?.Card || DefaultCard.Card;
+  return <Component {...props} />;
+}
 
-const CardFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props}
-  />
-))
-CardFooter.displayName = "CardFooter"
+export function CardHeader(props: React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>) {
+  const visualTheme = useVisualTheme();
+  const Component = CARD_REGISTRY[visualTheme as keyof typeof CARD_REGISTRY]?.CardHeader || DefaultCard.CardHeader;
+  return <Component {...props} />;
+}
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export function CardFooter(props: React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>) {
+  const visualTheme = useVisualTheme();
+  const Component = CARD_REGISTRY[visualTheme as keyof typeof CARD_REGISTRY]?.CardFooter || DefaultCard.CardFooter;
+  return <Component {...props} />;
+}
+
+export function CardTitle(props: React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>) {
+  const visualTheme = useVisualTheme();
+  const Component = CARD_REGISTRY[visualTheme as keyof typeof CARD_REGISTRY]?.CardTitle || DefaultCard.CardTitle;
+  return <Component {...props} />;
+}
+
+export function CardDescription(props: React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>) {
+  const visualTheme = useVisualTheme();
+  const Component = CARD_REGISTRY[visualTheme as keyof typeof CARD_REGISTRY]?.CardDescription || DefaultCard.CardDescription;
+  return <Component {...props} />;
+}
+
+export function CardContent(props: React.HTMLAttributes<HTMLDivElement> & React.RefAttributes<HTMLDivElement>) {
+  const visualTheme = useVisualTheme();
+  const Component = CARD_REGISTRY[visualTheme as keyof typeof CARD_REGISTRY]?.CardContent || DefaultCard.CardContent;
+  return <Component {...props} />;
+}

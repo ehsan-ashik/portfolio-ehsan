@@ -1,22 +1,41 @@
-import * as React from "react"
+'use client';
 
-import { cn } from "@/lib/utils"
+/**
+ * Smart Textarea Wrapper
+ * 
+ * This component detects the active theme and exports the appropriate
+ * Textarea implementation from the theme's component directory.
+ */
 
-const Textarea = React.forwardRef<
-  HTMLTextAreaElement,
-  React.ComponentProps<"textarea">
->(({ className, ...props }, ref) => {
-  return (
-    <textarea
-      className={cn(
-        "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        className
-      )}
-      ref={ref}
-      {...props}
-    />
-  )
-})
-Textarea.displayName = "Textarea"
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
+import * as React from "react";
 
-export { Textarea }
+// Import Textarea from each theme
+import { Textarea as DefaultTextarea } from '@/themes/default/components/Textarea';
+import { Textarea as GlassTextarea } from '@/themes/glass-refraction/components/Textarea';
+
+/**
+ * Textarea Component Registry
+ * Maps theme IDs to their Textarea implementations
+ */
+const TEXTAREA_REGISTRY = {
+  'default': DefaultTextarea,
+  'glass-refraction': GlassTextarea,
+} as const;
+
+/**
+ * Theme-aware Textarea component
+ * Automatically uses the correct Textarea implementation based on active theme
+ */
+export const Textarea = React.forwardRef<HTMLTextAreaElement, React.ComponentProps<"textarea">>(
+  (props, ref) => {
+    const visualTheme = useVisualTheme();
+
+    // Get Textarea from registry, fallback to default if theme not found
+    const TextareaComponent = TEXTAREA_REGISTRY[visualTheme as keyof typeof TEXTAREA_REGISTRY] || TEXTAREA_REGISTRY.default;
+
+    return <TextareaComponent ref={ref} {...props} />;
+  }
+);
+
+Textarea.displayName = "Textarea";

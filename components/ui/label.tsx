@@ -2,25 +2,35 @@
 
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
-import { cva, type VariantProps } from "class-variance-authority"
+import { type VariantProps } from "class-variance-authority"
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 
-import { cn } from "@/lib/utils"
+// Import Label from each theme
+import { Label as DefaultLabel } from '@/themes/default/components/Label';
+import { Label as GlassLabel } from '@/themes/glass-refraction/components/Label';
 
-const labelVariants = cva(
-  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-)
+/**
+ * Label Component Registry
+ * Maps theme IDs to their Label implementations
+ */
+const LABEL_REGISTRY = {
+  'default': DefaultLabel,
+  'glass-refraction': GlassLabel,
+} as const;
 
 const Label = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
-    VariantProps<typeof labelVariants>
->(({ className, ...props }, ref) => (
-  <LabelPrimitive.Root
-    ref={ref}
-    className={cn(labelVariants(), className)}
-    {...props}
-  />
-))
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  VariantProps<any> // Using any here as variants might differ slightly, but props are compatible
+>(({ className, ...props }, ref) => {
+  const visualTheme = useVisualTheme();
+
+  // Get Label from registry, fallback to default if theme not found
+  const LabelComponent = LABEL_REGISTRY[visualTheme as keyof typeof LABEL_REGISTRY] || LABEL_REGISTRY.default;
+
+  return <LabelComponent ref={ref} className={className} {...props} />;
+})
 Label.displayName = LabelPrimitive.Root.displayName
 
 export { Label }

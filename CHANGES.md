@@ -2,6 +2,46 @@
 
 This document tracks all changes, features, and improvements made to the Portfolio Website of Ehsan Ul Haque.
 
+## Version 1.2.0 - Glass Refraction Theme & Visual Polish
+
+### 💎 New Features
+
+#### **Theme Engine Architecture**
+- **Multi-Theme Support** - Extended `next-themes` to support "Visual Themes" (e.g., Default vs. Glass).
+- **ThemeRegistry** - Centralized theme configuration system handling CSS variables and component injection.
+- **Component Registry Pattern** - Smart wrappers for UI components (`Button`, `Card`, `Badge`, etc.) that dynamically load the correct theme implementation.
+- **SSR Compatibility** - Robust server-side rendering support with hydration mismatch prevention.
+
+#### **"Glass Refraction" Visual Theme**
+- **iOS-Inspired Glassmorphism** - Premium, translucent UI elements with background blur.
+- **Mesh Gradient Backgrounds** - Dynamic, multi-point radial gradients:
+  - **Light Mode**: Soft pastels (Blue/Purple/Cyan) for a dreamy aesthetic.
+  - **Dark Mode**: Deep cosmic tones (Midnight Blue/Deep Purple) for elegance.
+- **Glass Components**:
+  - **Buttons**: Pill-shaped, high-translucency, strong blur, and dramatic hover glow.
+  - **Cards**: Frosted glass effect with subtle white borders and soft shadows.
+  - **Badges**: Crystal-clear indicators with refined transparency.
+  - **Form Elements**: Glass inputs and textareas with focus glow effects.
+  - **Toasts**: Floating glass notifications with backdrop blur.
+
+### 🎨 UI/UX Improvements
+
+#### **Visual Polish**
+- **Mobile Navigation** - Now features the theme-specific mesh gradient background and perfectly centered menu items.
+- **Default Theme Refinements**:
+  - **Icon Buttons**: Restored circular shape (`rounded-full`) for social links.
+  - **Secondary Buttons**: Inverted colors (Dark in Light Mode, Light in Dark Mode) for better contrast.
+- **Global Defaults**:
+  - **Default Mode**: Dark Mode.
+  - **Default Visuals**: Glass Refraction Theme.
+
+#### **Component Updates**
+- **Button**: Standardized borders, improved padding for pill shapes, and fixed text visibility on transparent backgrounds.
+- **Card**: Unified glass styling across Project, Research, and Contact sections.
+- **MobileNav**: Fixed hydration errors and improved layout alignment.
+
+---
+
 ## Version 1.1.0 - Skills Section Redesign & Project Showcase
 
 ### 🚀 New Features

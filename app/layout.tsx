@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeRegistry } from '@/themes/core/ThemeRegistry';
 import { InterFont } from './fonts';
 
 import './globals.css';
@@ -18,13 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${InterFont.className} text-base antialiased bg-background text-foreground`}
       >
-        <ThemeProvider
+        <ThemeRegistry
+          visualTheme="glass-refraction"  // Switch to "glass-refraction" for glass theme
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
@@ -33,7 +34,7 @@ export default function RootLayout({
             <main className="flex-1 p-2">{children}</main>
             <Footer />
           </div>
-        </ThemeProvider>
+        </ThemeRegistry>
         <Toaster />
       </body>
     </html>

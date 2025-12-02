@@ -1,36 +1,64 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+'use client';
 
-import { cn } from "@/lib/utils"
+/**
+ * Smart Badge Wrapper
+ * 
+ * This component detects the active theme and exports the appropriate
+ * Badge implementation from the theme's component directory.
+ */
 
-const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-  {
-    variants: {
-      variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-)
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+// Import Badge from each theme
+import {
+  Badge as DefaultBadge,
+  badgeVariants as defaultBadgeVariants,
+  type BadgeProps
+} from '@/themes/default/components/Badge';
 
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  )
+import {
+  Badge as GlassBadge,
+  badgeVariants as glassBadgeVariants
+} from '@/themes/glass-refraction/components/Badge';
+
+// Export BadgeProps for consumer convenience
+export type { BadgeProps };
+
+/**
+ * Badge Component Registry
+ * Maps theme IDs to their Badge implementations
+ */
+const BADGE_REGISTRY = {
+  'default': DefaultBadge,
+  'glass-refraction': GlassBadge,
+} as const;
+
+const BADGE_VARIANTS_REGISTRY = {
+  'default': defaultBadgeVariants,
+  'glass-refraction': glassBadgeVariants,
+} as const;
+
+/**
+ * Theme-aware Badge component
+ * Automatically uses the correct Badge implementation based on active theme
+ */
+export function Badge(props: BadgeProps) {
+  const visualTheme = useVisualTheme();
+
+  // Get Badge from registry, fallback to default if theme not found
+  const BadgeComponent = BADGE_REGISTRY[visualTheme as keyof typeof BADGE_REGISTRY] || BADGE_REGISTRY.default;
+
+  return <BadgeComponent {...props} />;
 }
 
-export { Badge, badgeVariants }
+/**
+ * Export badgeVariants based on current theme
+ * This is a convenience export for edge cases where direct variant access is needed
+ */
+export function useBadgeVariants() {
+  const visualTheme = useVisualTheme();
+  return BADGE_VARIANTS_REGISTRY[visualTheme as keyof typeof BADGE_VARIANTS_REGISTRY] || defaultBadgeVariants;
+}
+
+// For backward compatibility, export default badgeVariants
+export const badgeVariants = defaultBadgeVariants;

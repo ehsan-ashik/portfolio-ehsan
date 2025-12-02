@@ -6,7 +6,7 @@ import { FaGoogleScholar } from "react-icons/fa6";
 import ReactMarkdown from 'react-markdown';
 import { profiledata, herodata } from '@/data/userdata';
 import { NunitoSansFont } from '@/app/fonts';
-import { Button } from './ui/button';
+import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 import { MdEmail } from 'react-icons/md';
 import { useToast } from '@/hooks/use-toast';
@@ -32,7 +32,7 @@ export function Hero() {
 
       <div className="pt-8 flex flex-col md:flex-row gap-3 items-center md:justify-start">
         <a href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
-          <Button variant="default" className=" rounded-full px-10 flex gap-2">
+          <Button variant="default" className=" rounded-full flex gap-2">
             <ExternalLink className="w-[1.2rem] h-[1.2rem]" />
             <span>View Resume</span>
           </Button>
