@@ -46,7 +46,10 @@ export function MobileNav() {
         <SheetTrigger>
           <Menu className="w-[1.2rem] h-[1.2rem] opacity-90 text-end" />
         </SheetTrigger>
-        <SheetContent className="max-w-[36rem] flex flex-col items-center">
+        <SheetContent
+          className="max-w-[36rem] flex flex-col items-center"
+          style={{ backgroundImage: 'var(--theme-gradient)' }}
+        >
           <SheetHeader>
             <SheetTitle className="scale-75">
               <ProfileCard />

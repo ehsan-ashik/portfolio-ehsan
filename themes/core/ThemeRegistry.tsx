@@ -164,13 +164,17 @@ function injectGradientBackground(theme: ThemeConfig) {
     const [lightGradient, darkGradient] = theme.effects.gradients.backgrounds;
 
     styleElement.textContent = `
-    body {
-      background: ${lightGradient};
-      background-attachment: fixed;
+    :root {
+      --theme-gradient: ${lightGradient};
     }
-    
-    .dark body {
-      background: ${darkGradient || lightGradient};
+
+    .dark {
+      --theme-gradient: ${darkGradient || lightGradient};
+    }
+
+    body {
+      background: var(--theme-gradient);
+      background-attachment: fixed;
     }
   `;
 }
