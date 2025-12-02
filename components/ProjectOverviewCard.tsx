@@ -28,7 +28,7 @@ export function ProjectOverviewCard({ title, description, stack, linkHref = "/pr
   }
 
   return (
-    <Card className="group h-full hover:border-foreground/20 transition-all duration-200 hover:shadow-sm">
+    <Card className="group h-full transition-all duration-200">
       <div className="flex flex-col h-full p-6 space-y-4">
         <div className="flex-grow">
           <h3 className={`${NunitoSansFont.className} text-lg font-semibold group-hover:text-foreground transition-colors h-14 leading-7 overflow-hidden line-clamp-2 text-ellipsis`}>
