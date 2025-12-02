@@ -1,22 +1,41 @@
-import * as React from "react"
+'use client';
 
-import { cn } from "@/lib/utils"
+/**
+ * Smart Input Wrapper
+ * 
+ * This component detects the active theme and exports the appropriate
+ * Input implementation from the theme's component directory.
+ */
 
-const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
-  ({ className, type, ...props }, ref) => {
-    return (
-      <input
-        type={type}
-        className={cn(
-          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-          className
-        )}
-        ref={ref}
-        {...props}
-      />
-    )
+import { useVisualTheme } from '@/themes/core/ThemeRegistry';
+import * as React from "react";
+
+// Import Input from each theme
+import { Input as DefaultInput } from '@/themes/default/components/Input';
+import { Input as GlassInput } from '@/themes/glass-refraction/components/Input';
+
+/**
+ * Input Component Registry
+ * Maps theme IDs to their Input implementations
+ */
+const INPUT_REGISTRY = {
+  'default': DefaultInput,
+  'glass-refraction': GlassInput,
+} as const;
+
+/**
+ * Theme-aware Input component
+ * Automatically uses the correct Input implementation based on active theme
+ */
+export const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  (props, ref) => {
+    const visualTheme = useVisualTheme();
+
+    // Get Input from registry, fallback to default if theme not found
+    const InputComponent = INPUT_REGISTRY[visualTheme as keyof typeof INPUT_REGISTRY] || INPUT_REGISTRY.default;
+
+    return <InputComponent ref={ref} {...props} />;
   }
-)
-Input.displayName = "Input"
+);
 
-export { Input }
+Input.displayName = "Input";
