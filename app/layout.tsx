@@ -23,9 +23,9 @@ export default function RootLayout({
         className={`${InterFont.className} text-base antialiased bg-background text-foreground`}
       >
         <ThemeRegistry
-          visualTheme="glass-refraction"  // Switch to "glass-refraction" for glass theme
+          visualTheme="default"  // Switch to "glass-refraction" for glass theme
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
