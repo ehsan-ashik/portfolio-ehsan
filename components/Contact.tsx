@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -25,13 +26,25 @@ export function Contact() {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
+    const { toast } = useToast();
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        toast({
+            title: "Opening email client...",
+            description: "Please complete your message in your default email app.",
+        });
+
         const subject = `Portfolio Contact from ${formData.name}`;
         const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-        window.location.href = `mailto:${contactdata.email_address}?subject=${encodeURIComponent(
-            subject
-        )}&body=${encodeURIComponent(body)}`;
+
+        // Small delay to let the toast show before the browser switches context
+        setTimeout(() => {
+            window.location.href = `mailto:${contactdata.email_address}?subject=${encodeURIComponent(
+                subject
+            )}&body=${encodeURIComponent(body)}`;
+        }, 1000);
     };
 
     return (
