@@ -61,7 +61,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className="rounded-full">
               <FaLinkedin className="h-[1.2rem] w-[1.2rem] opacity-80" />
             </Button>
           </a>
@@ -70,7 +70,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className="rounded-full">
               <FaGoogleScholar className="h-[1.2rem] w-[1.2rem] opacity-80" />
             </Button>
           </a>
