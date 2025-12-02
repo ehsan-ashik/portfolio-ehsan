@@ -62,7 +62,7 @@ export function ProjectCard(project: Project) {
                 >
                   <Button
                     variant="secondary"
-                    className="rounded-full max-w-fit self-center bg-secondary-foreground text-accent hover:bg-secondary-foreground/95 text-sm"
+                    className="rounded-full max-w-fit self-center text-sm"
                   >
                     {project.additional_link_title}
                   </Button>

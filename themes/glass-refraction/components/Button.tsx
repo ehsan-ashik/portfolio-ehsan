@@ -18,9 +18,10 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                // Glass primary - VERY visible hover
+                // Glass primary - "Thick/Frosted" Glass
+                // High blur, visible opacity, distinct border = "Heavy" feel
                 default:
-                    "backdrop-blur-xl bg-white/20 dark:bg-white/10 text-black dark:text-white border border-white/40 dark:border-white/20 shadow-[0_4px_16px_rgba(0,0,0,0.1)] hover:bg-white/60 dark:hover:bg-white/40 hover:border-white/95 hover:border-2 hover:shadow-[0_12px_48px_rgba(255,255,255,0.6),0_0_0_2px_rgba(255,255,255,0.4)] dark:hover:shadow-[0_12px_48px_rgba(255,255,255,0.4),0_0_0_2px_rgba(255,255,255,0.5)] hover:brightness-125",
+                    "backdrop-blur-xl bg-white/25 dark:bg-white/15 text-black dark:text-white border border-white/40 dark:border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/50 dark:hover:bg-white/30 hover:border-white/80 hover:shadow-[0_8px_32px_rgba(255,255,255,0.3)] transition-all duration-300 font-semibold",
 
                 // Glass destructive - strong visible hover
                 destructive:
@@ -30,9 +31,10 @@ const buttonVariants = cva(
                 outline:
                     "backdrop-blur-lg bg-white/10 dark:bg-white/5 text-black dark:text-white border border-white/40 dark:border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:bg-white/50 dark:hover:bg-white/35 hover:border-white/95 hover:border-2 hover:shadow-[0_12px_48px_rgba(255,255,255,0.5)] dark:hover:shadow-[0_12px_48px_rgba(255,255,255,0.3)]",
 
-                // Glass secondary - visible hover
+                // Glass secondary - "Thin/Clear" Glass
+                // Low blur, barely visible opacity, subtle border = "Light" feel
                 secondary:
-                    "backdrop-blur-lg bg-white/15 dark:bg-white/8 text-black dark:text-white border border-white/30 dark:border-white/15 shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-white/55 dark:hover:bg-white/35 hover:border-white/90 hover:border-2 hover:shadow-[0_12px_48px_rgba(255,255,255,0.5)] hover:brightness-115",
+                    "backdrop-blur-md bg-white/5 dark:bg-white/5 text-black/80 dark:text-white/90 border border-black/10 dark:border-white/10 shadow-none hover:bg-white/20 dark:hover:bg-white/15 hover:border-black/20 dark:hover:border-white/30 hover:text-black dark:hover:text-white transition-all duration-300",
 
                 // Glass ghost - visible glow on hover
                 ghost:
