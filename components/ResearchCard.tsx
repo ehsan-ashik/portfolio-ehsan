@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 
 interface ResearchProject {
@@ -18,7 +17,6 @@ interface ResearchProject {
   remark?: string;
 }
 
-
 export function ResearchCard(project: ResearchProject) {
   return (
     <div
@@ -26,26 +24,29 @@ export function ResearchCard(project: ResearchProject) {
     >
       <div className="h-fit">
         <h1
-          className={` ${NunitoSansFont.className} text-center md:text-left text-2xl md:text-3xl font-bold opacity-95`}
+          style={{ fontFamily: 'var(--font-display)' }}
+          className="text-center md:text-left text-2xl md:text-3xl font-semibold tracking-tight"
         >
           {project.title}
         </h1>
-        <div className="pt-1 text-muted-foreground flex flex-wrap gap-1 justify-center md:justify-start">
+        <div className="pt-2 text-muted-foreground flex flex-wrap gap-1 justify-center md:justify-start">
           {project.stack.map((value, idx) => (
-            <Badge variant="secondary" key={idx} className="">
+            <Badge variant="secondary" key={idx}>
               <span className="text-nowrap">{value}</span>
             </Badge>
           ))}
         </div>
         {project.remark && project.remark != '' ? (
-          <p className="text-sm italic opacity-90 pt-4">**{project.remark}</p>
+          <p className="text-sm italic text-muted-foreground pt-4">
+            **{project.remark}
+          </p>
         ) : null}
         <div
           id="project-body"
           className={`flex flex-col ${project.rank % 2 ? `lg:flex-row` : `lg:flex-row-reverse`} gap-4 lg:gap-6 pt-6`}
         >
           <div id="desc" className="flex-1 lg:text-sm self-center">
-            <ReactMarkdown className="text-pretty leading-7 font-light opacity-90 ">
+            <ReactMarkdown className="text-pretty leading-7 font-light text-muted-foreground">
               {project.description}
             </ReactMarkdown>
 
@@ -62,7 +63,7 @@ export function ResearchCard(project: ResearchProject) {
                 </a>
               ) : null}
               {project.additional_link !== '' &&
-                project.additional_link !== null ? (
+              project.additional_link !== null ? (
                 <a
                   href={project.additional_link}
                   target="_blank"
@@ -78,16 +79,11 @@ export function ResearchCard(project: ResearchProject) {
               ) : null}
             </div>
           </div>
-          <div
-            id="visual"
-            className="hidden lg:flex flex-1 min-w-full lg:min-w-fit  justify-center items-center"
-            dangerouslySetInnerHTML={
-              project.visual_type === 'slides'
-                ? { __html: project.visual_link }
-                : undefined
-            }
-          >
-            {project.visual_type === 'image' ? (
+          {project.visual_type === 'image' && (
+            <div
+              id="visual"
+              className="hidden lg:flex flex-1 min-w-full lg:min-w-fit justify-center items-center"
+            >
               <Image
                 alt="a screenshot from the poster"
                 width={450}
@@ -95,8 +91,17 @@ export function ResearchCard(project: ResearchProject) {
                 src={project.visual_link}
                 className="sm:w-full sm:h-full lg:w-[450px] h-[285px]"
               />
-            ) : null}
-          </div>
+            </div>
+          )}
+          {project.visual_type === 'slides' && (
+            <div
+              id="visual"
+              className="hidden lg:flex flex-1 min-w-full lg:min-w-fit justify-center items-center"
+              // Note: This uses dangerouslySetInnerHTML for embedding slide iframes from trusted data sources
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: project.visual_link }}
+            />
+          )}
         </div>
       </div>
     </div>

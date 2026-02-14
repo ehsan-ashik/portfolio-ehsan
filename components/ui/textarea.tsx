@@ -13,6 +13,7 @@ import * as React from "react";
 // Import Textarea from each theme
 import { Textarea as DefaultTextarea } from '@/themes/default/components/Textarea';
 import { Textarea as GlassTextarea } from '@/themes/glass-refraction/components/Textarea';
+import { Textarea as EmberTextarea } from '@/themes/obsidian-ember/components/Textarea';
 
 /**
  * Textarea Component Registry
@@ -21,6 +22,7 @@ import { Textarea as GlassTextarea } from '@/themes/glass-refraction/components/
 const TEXTAREA_REGISTRY = {
   'default': DefaultTextarea,
   'glass-refraction': GlassTextarea,
+  'obsidian-ember': EmberTextarea,
 } as const;
 
 /**

@@ -6,7 +6,7 @@ import React from 'react';
 
 export default function Page() {
   return (
-    <section className="flex flex-col items-center md:items-start gap-5 lg:gap-20 lg:flex-row">
+    <section className="flex flex-col items-center md:items-start gap-5 lg:gap-24 lg:flex-row">
       <div className="pt-10">
         <ProfileCard />
       </div>
@@ -14,13 +14,17 @@ export default function Page() {
         {aboutdata.about_desc_parts.map((part, idx) => (
           <ReactMarkdown
             key={idx}
-            className=" mx-auto md:mx-0 pt-6 text-left leading-7 font-light opacity-90"
+            className="mx-auto md:mx-0 pt-6 text-left leading-7 font-light text-muted-foreground"
           >
             {part}
           </ReactMarkdown>
         ))}
-        <div className="pt-10 border-t border-border mt-16"></div>
-        <SkillsCard />
+        <div className="pt-10 mt-16">
+          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+        <div className="pt-10">
+          <SkillsCard />
+        </div>
       </div>
     </section>
   );

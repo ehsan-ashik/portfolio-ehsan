@@ -13,6 +13,7 @@ import * as React from "react";
 // Import Input from each theme
 import { Input as DefaultInput } from '@/themes/default/components/Input';
 import { Input as GlassInput } from '@/themes/glass-refraction/components/Input';
+import { Input as EmberInput } from '@/themes/obsidian-ember/components/Input';
 
 /**
  * Input Component Registry
@@ -21,6 +22,7 @@ import { Input as GlassInput } from '@/themes/glass-refraction/components/Input'
 const INPUT_REGISTRY = {
   'default': DefaultInput,
   'glass-refraction': GlassInput,
+  'obsidian-ember': EmberInput,
 } as const;
 
 /**

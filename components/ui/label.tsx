@@ -8,6 +8,7 @@ import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 // Import Label from each theme
 import { Label as DefaultLabel } from '@/themes/default/components/Label';
 import { Label as GlassLabel } from '@/themes/glass-refraction/components/Label';
+import { Label as EmberLabel } from '@/themes/obsidian-ember/components/Label';
 
 /**
  * Label Component Registry
@@ -16,6 +17,7 @@ import { Label as GlassLabel } from '@/themes/glass-refraction/components/Label'
 const LABEL_REGISTRY = {
   'default': DefaultLabel,
   'glass-refraction': GlassLabel,
+  'obsidian-ember': EmberLabel,
 } as const;
 
 const Label = React.forwardRef<

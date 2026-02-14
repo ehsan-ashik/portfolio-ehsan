@@ -8,11 +8,17 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <div className='pt-16 border-b border-border'></div>
+      <div className="py-16">
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      </div>
       <ProjectOverview />
-      <div className='pt-6 border-b border-border'></div>
+      <div className="py-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      </div>
       <ResearchOverview />
-      <div className='pt-6 border-b border-border'></div>
+      <div className="py-10">
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      </div>
       <Contact />
     </>
   );

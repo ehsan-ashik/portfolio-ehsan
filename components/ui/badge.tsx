@@ -21,6 +21,11 @@ import {
   badgeVariants as glassBadgeVariants
 } from '@/themes/glass-refraction/components/Badge';
 
+import {
+  Badge as EmberBadge,
+  badgeVariants as emberBadgeVariants
+} from '@/themes/obsidian-ember/components/Badge';
+
 // Export BadgeProps for consumer convenience
 export type { BadgeProps };
 
@@ -31,11 +36,13 @@ export type { BadgeProps };
 const BADGE_REGISTRY = {
   'default': DefaultBadge,
   'glass-refraction': GlassBadge,
+  'obsidian-ember': EmberBadge,
 } as const;
 
 const BADGE_VARIANTS_REGISTRY = {
   'default': defaultBadgeVariants,
   'glass-refraction': glassBadgeVariants,
+  'obsidian-ember': emberBadgeVariants,
 } as const;
 
 /**

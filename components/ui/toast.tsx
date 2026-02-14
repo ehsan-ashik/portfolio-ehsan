@@ -8,6 +8,7 @@ import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 // Import Toast components from each theme
 import * as DefaultToast from '@/themes/default/components/Toast';
 import * as GlassToast from '@/themes/glass-refraction/components/Toast';
+import * as EmberToast from '@/themes/obsidian-ember/components/Toast';
 
 /**
  * Toast Component Registry
@@ -15,6 +16,7 @@ import * as GlassToast from '@/themes/glass-refraction/components/Toast';
 const TOAST_REGISTRY = {
   'default': DefaultToast,
   'glass-refraction': GlassToast,
+  'obsidian-ember': EmberToast,
 } as const;
 
 // Helper to get the current theme's components

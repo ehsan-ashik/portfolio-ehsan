@@ -12,6 +12,7 @@ import { useVisualTheme } from '@/themes/core/ThemeRegistry';
 // Import Card components from each theme
 import * as DefaultCard from '@/themes/default/components/Card';
 import * as GlassCard from '@/themes/glass-refraction/components/Card';
+import * as EmberCard from '@/themes/obsidian-ember/components/Card';
 
 /**
  * Card Component Registry
@@ -20,6 +21,7 @@ import * as GlassCard from '@/themes/glass-refraction/components/Card';
 const CARD_REGISTRY = {
   'default': DefaultCard,
   'glass-refraction': GlassCard,
+  'obsidian-ember': EmberCard,
 } as const;
 
 /**

@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { NunitoSansFont } from '@/app/fonts';
 import Image from 'next/image';
 
 interface Project {
@@ -17,19 +16,19 @@ interface Project {
   visual_link: string;
 }
 
-
 export function ProjectCard(project: Project) {
   return (
     <div>
       <div className="max-w-full h-fit">
         <h1
-          className={` ${NunitoSansFont.className} text-center md:text-left text-2xl md:text-3xl font-bold opacity-95`}
+          style={{ fontFamily: 'var(--font-display)' }}
+          className="text-center md:text-left text-2xl md:text-3xl font-semibold tracking-tight"
         >
           {project.title}
         </h1>
-        <div className="pt-1 text-muted-foreground flex flex-wrap gap-1 justify-center md:justify-start">
+        <div className="pt-2 text-muted-foreground flex flex-wrap gap-1 justify-center md:justify-start">
           {project.stack.map((value, idx) => (
-            <Badge variant="secondary" key={idx} className="">
+            <Badge variant="secondary" key={idx}>
               <span className="text-nowrap">{value}</span>
             </Badge>
           ))}
@@ -38,7 +37,7 @@ export function ProjectCard(project: Project) {
           className={`pt-6 lg:min-h-[22rem] flex flex-col ${project.rank % 2 ? `lg:flex-row` : `lg:flex-row-reverse`} gap-6`}
         >
           <div className="lg:pt-0 lg:w-6/12 flex flex-col justify-center">
-            <ReactMarkdown className=" text-sm text-pretty leading-7 font-light opacity-90 ">
+            <ReactMarkdown className="text-sm text-pretty leading-7 font-light text-muted-foreground">
               {project.description}
             </ReactMarkdown>
             <div
@@ -54,7 +53,7 @@ export function ProjectCard(project: Project) {
                 </Button>
               </a>
               {project.additional_link !== '' &&
-                project.additional_link !== null ? (
+              project.additional_link !== null ? (
                 <a
                   href={project.additional_link}
                   target="_blank"
@@ -80,7 +79,7 @@ export function ProjectCard(project: Project) {
                 width={1920}
                 height={1920}
                 src={project.visual_link}
-                className={`w-full h-fit border-4 border-muted-foreground `}
+                className="w-full h-fit rounded-lg border border-border shadow-lg"
               />
             ) : null}
           </div>

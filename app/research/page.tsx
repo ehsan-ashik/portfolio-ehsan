@@ -1,5 +1,4 @@
-import React from 'react'
-import { NunitoSansFont } from '../fonts';
+import React from 'react';
 import { researchdata } from '@/data/userdata';
 import { ResearchCard } from '@/components/ResearchCard';
 
@@ -7,11 +6,12 @@ export default function Page() {
   return (
     <section className="pt-10">
       <h1
-        className={`${NunitoSansFont.className} text-center md:text-left text-4xl font-normal opacity-95`}
+        style={{ fontFamily: 'var(--font-display)' }}
+        className="text-center md:text-left text-4xl md:text-5xl font-light tracking-tight"
       >
-        My Reseach
+        My Research
       </h1>
-      <p className="pt-4 font-light opacity-90">
+      <p className="pt-4 font-light text-muted-foreground">
         Here are some of the research projects that I've worked on, each with a
         brief description to introduce you with my research.
       </p>
@@ -22,7 +22,9 @@ export default function Page() {
           .map((project) => (
             <div key={project.rank}>
               <ResearchCard {...project} />
-              <div className="pt-6 border-b"></div>
+              <div className="pt-6">
+                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+              </div>
             </div>
           ))}
       </div>

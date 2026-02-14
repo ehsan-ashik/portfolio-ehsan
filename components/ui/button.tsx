@@ -25,6 +25,11 @@ import {
   buttonVariants as glassButtonVariants
 } from '@/themes/glass-refraction/components/Button';
 
+import {
+  Button as EmberButton,
+  buttonVariants as emberButtonVariants
+} from '@/themes/obsidian-ember/components/Button';
+
 // Export ButtonProps for consumer convenience
 export type { ButtonProps };
 
@@ -39,14 +44,13 @@ export type { ButtonProps };
 const BUTTON_REGISTRY = {
   'default': DefaultButton,
   'glass-refraction': GlassButton,
-  // Future themes go here:
-  // 'brutalist': BrutalistButton,
-  // 'gradient-mesh': GradientMeshButton,
+  'obsidian-ember': EmberButton,
 } as const;
 
 const BUTTON_VARIANTS_REGISTRY = {
   'default': defaultButtonVariants,
   'glass-refraction': glassButtonVariants,
+  'obsidian-ember': emberButtonVariants,
 } as const;
 
 /**

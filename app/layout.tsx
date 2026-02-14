@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeRegistry } from '@/themes/core/ThemeRegistry';
-import { InterFont } from './fonts';
+import { InterFont, SoraFont } from './fonts';
 
 import './globals.css';
 import { Header } from '@/components/Header';
@@ -21,9 +21,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${InterFont.className} text-base antialiased bg-background text-foreground`}
+        style={{ '--font-display': SoraFont.style.fontFamily } as React.CSSProperties}
       >
         <ThemeRegistry
-          visualTheme="glass-refraction"  // Switch to "glass-refraction" for glass theme
+          visualTheme="obsidian-ember"
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}

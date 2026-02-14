@@ -1,4 +1,3 @@
-import { NunitoSansFont } from '@/app/fonts';
 import { researchdata } from '@/data/userdata';
 import React from 'react';
 import { ProjectOverviewCard } from './ProjectOverviewCard';
@@ -15,29 +14,32 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export function ResearchOverview() {
-  // Get all visible research papers and randomly select 3
-  const visibleResearch = researchdata.filter(research => research.visible);
+  const visibleResearch = researchdata.filter((research) => research.visible);
   const featuredResearch = shuffleArray(visibleResearch).slice(0, 3);
 
   return (
     <section className="py-10">
       <div className="mb-8">
-        <h2 className={`${NunitoSansFont.className} text-2xl font-bold opacity-95`}>
+        <h2
+          style={{ fontFamily: 'var(--font-display)' }}
+          className="text-2xl font-semibold tracking-tight"
+        >
           Featured Research
         </h2>
-        <p className="font-light opacity-90 pt-2">
-          Recent research contributions in usable security and privacy. For a complete list, see <Link href="/research">research page</Link>.
+        <p className="font-light text-muted-foreground pt-2">
+          Recent research contributions in usable security and privacy. For a
+          complete list, see <Link href="/research">research page</Link>.
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {featuredResearch.map((research) => (
           <ProjectOverviewCard
-            key={research.rank} // Use rank as key for better React performance
+            key={research.rank}
             title={research.title}
             description={research.description}
             stack={research.stack}
-            linkHref="/research" // Point to research page instead of projects
+            linkHref="/research"
           />
         ))}
       </div>

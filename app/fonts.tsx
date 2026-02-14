@@ -1,4 +1,4 @@
-import { Roboto_Slab, Montserrat, Open_Sans, Caveat, Inter, Comme, Nunito_Sans } from 'next/font/google';
+import { Roboto_Slab, Montserrat, Open_Sans, Caveat, Inter, Comme, Nunito_Sans, Sora } from 'next/font/google';
 
 export const OpenSans = Open_Sans({
   display: 'swap',
@@ -32,4 +32,10 @@ export const CommeFont = Comme({
 export const NunitoSansFont = Nunito_Sans({
   display: 'swap',
   subsets: ['latin']
+});
+
+export const SoraFont = Sora({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700']
 });

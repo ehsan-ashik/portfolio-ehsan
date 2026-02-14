@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -14,9 +18,9 @@ body {
   }
 }
 
-/* 
+/*
  * Theme-specific CSS variables are now injected dynamically by ThemeRegistry
- * based on the active visual theme (default or glass-refraction)
+ * based on the active visual theme (default, glass-refraction, or obsidian-ember)
  */
 
 @layer base {
@@ -35,7 +39,42 @@ body {
     @apply font-bold;
   }
 
-    p > em {
-      @apply font-normal;
-    }
+  p > em {
+    @apply font-normal;
+  }
+}
+
+/* Obsidian Ember: Grain texture overlay */
+[data-visual-theme="obsidian-ember"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Obsidian Ember: Amber text selection */
+[data-visual-theme="obsidian-ember"] ::selection {
+  background: hsl(36 90% 55% / 0.3);
+  color: inherit;
+}
+
+/* Obsidian Ember: Custom scrollbar (dark mode) */
+.dark [data-visual-theme="obsidian-ember"] ::-webkit-scrollbar {
+  width: 6px;
+}
+.dark [data-visual-theme="obsidian-ember"] ::-webkit-scrollbar-track {
+  background: hsl(25, 15%, 8%);
+}
+.dark [data-visual-theme="obsidian-ember"] ::-webkit-scrollbar-thumb {
+  background: hsl(25, 10%, 25%);
+  border-radius: 3px;
+}
+.dark [data-visual-theme="obsidian-ember"] ::-webkit-scrollbar-thumb:hover {
+  background: hsl(36, 50%, 35%);
 }
