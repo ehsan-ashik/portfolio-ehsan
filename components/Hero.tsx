@@ -15,7 +15,7 @@ export function Hero() {
   const { toast } = useToast();
 
   return (
-    <section className="w-full mx-auto lg:mx-0 pt-16 md:pt-28 pb-10">
+    <section className="w-full mx-auto lg:mx-0 pt-16 md:pt-28 pb-16">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export function Hero() {
             ease: [0.16, 1, 0.3, 1]
           }}
         >
-          <ReactMarkdown className="w-auto lg:w-[48rem] mx-auto md:mx-0 pt-6 text-left leading-8 font-light text-muted-foreground">
+          <ReactMarkdown className="w-auto lg:w-[48rem] mx-auto md:mx-0 pt-8 text-left leading-8 font-light text-muted-foreground">
             {part}
           </ReactMarkdown>
         </motion.div>

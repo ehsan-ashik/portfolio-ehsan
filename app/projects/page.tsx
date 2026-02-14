@@ -4,14 +4,14 @@ import { ProjectCard } from '@/components/ProjectCard';
 
 export default function Page() {
   return (
-    <section className="pt-10">
+    <section className="pt-16">
       <h1
         style={{ fontFamily: 'var(--font-display)' }}
         className="text-center md:text-left text-4xl md:text-5xl font-light tracking-tight"
       >
         My Projects
       </h1>
-      <p className="pt-4 font-light text-muted-foreground">
+      <p className="pt-6 font-light text-muted-foreground">
         Explore a curated selection of my projects, each with a brief
         description to give you a taste of what I've been working on. For a
         complete list and in-depth details,{' '}

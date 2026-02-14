@@ -72,7 +72,7 @@ export function MobileNav() {
                       bounce: 120,
                       delay: 0.2
                     }}
-                    className="text-xl text-foreground opacity-80 inline-flex group relative"
+                    className="text-sm tracking-wide uppercase text-muted-foreground font-medium inline-flex group relative hover:text-foreground transition-colors duration-200"
                   >
                     {navitem.display}
                     {pathname === navitem.path ? (

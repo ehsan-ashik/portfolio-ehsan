@@ -51,7 +51,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full py-10">
+    <section id="contact" className="w-full py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export function Contact() {
           >
             {contactdata.title}
           </h2>
-          <p className="font-light text-muted-foreground pt-2">
+          <p className="font-light text-muted-foreground pt-3">
             {contactdata.description}
           </p>
         </div>

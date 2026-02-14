@@ -18,15 +18,15 @@ export function ProjectOverview() {
   const featuredProjects = shuffleArray(visibleProjects).slice(0, 3);
 
   return (
-    <section className="py-10">
-      <div className="mb-8">
+    <section className="py-12">
+      <div className="mb-10">
         <h2
           style={{ fontFamily: 'var(--font-display)' }}
           className="text-2xl font-semibold tracking-tight"
         >
           Featured Projects
         </h2>
-        <p className="font-light text-muted-foreground pt-2">
+        <p className="font-light text-muted-foreground pt-3">
           A selection of projects I've built. For a complete list, see{' '}
           <Link href="/projects">projects page</Link>.
         </p>

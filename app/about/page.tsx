@@ -7,7 +7,7 @@ import React from 'react';
 export default function Page() {
   return (
     <section className="flex flex-col items-center md:items-start gap-5 lg:gap-24 lg:flex-row">
-      <div className="pt-10">
+      <div className="pt-16">
         <ProfileCard />
       </div>
       <div className="lg:pt-4 text-clip grow">

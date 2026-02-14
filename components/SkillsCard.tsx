@@ -10,7 +10,7 @@ export function SkillsCard() {
       >
         Technologies
       </h3>
-      <p className="font-light pt-2 text-muted-foreground leading-7">
+      <p className="font-light pt-3 text-muted-foreground leading-7">
         Here is a curated list of technologies I've been relying on for both
         professional work and personal projects.
       </p>
